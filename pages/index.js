@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css/bundle";
 import Image from 'next/image'
 import Footer from './components/Footer';
+import styles from './../styles/Home.module.css'
 // Images
 
 function Index() {
@@ -112,7 +113,7 @@ function Index() {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="coding.html" className="btn">
+                                <a href="coding.html" className={styles.btn}>
                                     read more
                                 </a>
                             </div>
@@ -128,7 +129,7 @@ function Index() {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="robotics.html" className="btn">
+                                <a href="robotics.html" className={styles.btn}>
                                     read more
                                 </a>
                             </div>
@@ -144,7 +145,7 @@ function Index() {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="fashion.html" className="btn">
+                                <a href="fashion.html" className={styles.btn}>
                                     read more
                                 </a>
                             </div>
@@ -160,7 +161,7 @@ function Index() {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="dmd.html" className="btn">
+                                <a href="dmd.html" className={styles.btn}>
                                     read more
                                 </a>
                             </div>
@@ -176,7 +177,7 @@ function Index() {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="Finance.html" className="btn">
+                                <a href="Finance.html" className={styles.btn}>
                                     read more
                                 </a>
                             </div>
@@ -192,7 +193,7 @@ function Index() {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="emp.html" className="btn">
+                                <a href="emp.html" className={styles.btn}>
                                     read more
                                 </a>
                             </div>

@@ -71,7 +71,13 @@ a {
  section {
    padding: 5rem 10%;
  }
- 
+
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
  .heading-link {
    text-align: center;
    background: url(/heading-bg.jpg) no-repeat;
@@ -187,6 +193,7 @@ a {
    color: #0eb582;
  }
  
+
  .header .icons div {
    cursor: pointer;
    font-size: 2.5rem;

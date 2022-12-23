@@ -11,7 +11,7 @@ export default function signup() {
     const handelSubmit = async (e) => {
         e.preventDefault();
         const formBody = { name: name, email: email, password: password }
-        let res = await fetch('http://localhost:3000/api/signup', {
+        let res = await fetch(process.env.SIGN_API_URL, {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

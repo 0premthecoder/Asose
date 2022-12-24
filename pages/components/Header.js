@@ -3,6 +3,7 @@ import AccountForm from "./AccountForm";
 import Link from 'next/link'
 function Header() {
     const [isOpen, setIsOpen] = useState(false)
+    const [navactive, setNavactive] = useState('')
     const togglepage = (active) => {
         setIsOpen(active)
     }
@@ -12,8 +13,8 @@ function Header() {
                 {" "}
                 ASOSE{" "}
             </Link>
-            <nav className="navbar">
-                <div id="close-navbar" className="fas fa-times" />
+            <nav className={`navbar ${navactive}`}>
+                <div id="close-navbar" className="fas fa-times" onClick={() => setNavactive('')} />
                 <Link href='/'>Home</Link>
                 <Link href="/about">About</Link>
                 <Link href="/courses">Courses</Link>
@@ -21,7 +22,7 @@ function Header() {
             </nav>
             <div className="icons">
                 <div id="account-btn" onClick={() => togglepage(true)} className="fas fa-user" />
-                <div id="menu-btn" className="fas fa-bars" />
+                <div id="menu-btn" onClick={() => setNavactive('active')} className="fas fa-bars" />
             </div>
         </header>
         {isOpen ? <AccountForm togglepage={togglepage} /> : null}

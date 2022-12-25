@@ -19,7 +19,7 @@ function Header() {
                 progress: undefined,
                 theme: "dark",
             });
-
+            setIsOpen(false)
         }
     }
     return <>

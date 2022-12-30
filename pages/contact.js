@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default function contact() {
   return (
     <>
+    <Header />
   <div className="account-form">
     <div id="close-form" className="fas fa-times" />
     <div className="buttons">
@@ -173,6 +176,8 @@ export default function contact() {
       </div>
     </div>
   </section>
+
+  <Footer />
 </>
 
   )

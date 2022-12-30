@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Link from 'next/link'
 
+
 export default function contact() {
+    const [quest, setQuest] = useState(' ')
   return (
     <>
     <Header />
@@ -103,10 +105,10 @@ export default function contact() {
   <section className="faq">
     <h1 className="heading">frequently asked questions</h1>
     <div className="accordion-container">
-      <div className="accordion active">
+      <div className={`accordion ${quest === '1' ? 'active' : ' ' }`}>
         <div className="accordion-heading">
           <h3>how to contact for help?</h3>
-          <i className="fas fa-angle-down" />
+          <i className="fas fa-angle-down" onClick={ ()=> quest === '1' ? setQuest(' ') : setQuest('1')} />
         </div>
         <p className="accordion-content">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
@@ -115,10 +117,10 @@ export default function contact() {
           voluptatibus deserunt quidem. Natus, quo.
         </p>
       </div>
-      <div className="accordion">
+      <div className={`accordion ${quest === '2' ? 'active' : ' ' }`}>
         <div className="accordion-heading">
           <h3>what is the best skill cource in 2022?</h3>
-          <i className="fas fa-angle-down" />
+          <i className="fas fa-angle-down" onClick={ ()=> quest === '2' ? setQuest(' ') : setQuest('2')} />
         </div>
         <p className="accordion-content">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit

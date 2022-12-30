@@ -39,7 +39,7 @@ function courses() {
           <div className="box">
             <div className="image">
               <img src="/course-2-2.jpg" alt="" />
-              <h3>Electro Machanical Production</h3>
+              <h3>Electro Mechanical Production</h3>
             </div>
             <div className="content">
               <h3>choose what's best for you!</h3>

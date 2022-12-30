@@ -45,7 +45,7 @@ function Header() {
                 <Link href='/'>Home</Link>
                 <Link href="/about">About</Link>
                 <Link href="/courses">Courses</Link>
-                <Link href="/contacts">Contact</Link>
+                <Link href="/contact">Contact</Link>
             </nav>
             <div className="icons">
                 <div id="account-btn" onClick={() => togglepage(true)} className="fas fa-user" />

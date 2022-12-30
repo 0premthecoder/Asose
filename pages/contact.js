@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Link from 'next/link'
 
 export default function contact() {
   return (
@@ -45,7 +46,7 @@ export default function contact() {
     <h3>contact us</h3>
     <p>
       {" "}
-      <a href="home.html">home</a> / contact{" "}
+      <Link href="/">home</Link> / contact{" "}
     </p>
   </section>
   {/* contact section starts  */}

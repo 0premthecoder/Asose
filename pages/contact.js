@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Link from 'next/link'
-
+import styles from './../styles/Home.module.css'
 
 export default function contact() {
     const [quest, setQuest] = useState(' ')
@@ -96,7 +96,7 @@ export default function contact() {
           rows={10}
           defaultValue={""}
         />
-        <input type="submit" defaultValue="send message" className="btn" />
+        <input type="submit" defaultValue="send message" className={styles.btn} />
       </form>
     </div>
   </section>

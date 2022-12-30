@@ -129,7 +129,7 @@ export default function contact() {
           voluptatibus deserunt quidem. Natus, quo.
         </p>
       </div>
-      <div className="accordion">
+      {/* <div className="accordion">
         <div className="accordion-heading">
           <h3>how much fees for web development?</h3>
           <i className="fas fa-angle-down" />
@@ -176,7 +176,7 @@ export default function contact() {
           aut. Recusandae officia quis temporibus! Magnam mollitia nostrum
           voluptatibus deserunt quidem. Natus, quo.
         </p>
-      </div>
+      </div> */}
     </div>
   </section>
 

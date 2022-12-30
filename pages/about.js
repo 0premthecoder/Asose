@@ -145,7 +145,7 @@ function About() {
                         <SwiperSlide className="swiper-slide slide">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
                             <img src="/pic-3.png" alt="" />
-                            <h3>shubham</h3>
+                            <h3>Student 1</h3>
                             <div className="stars">
                                 <i className="fas fa-star"></i>
                                 <i className="fas fa-star"></i>
@@ -158,7 +158,7 @@ function About() {
                         <SwiperSlide className="swiper-slide slide">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
                             <img src="/pic-3.png" alt="" />
-                            <h3>Prem</h3>
+                            <h3>Student 2</h3>
                             <div className="stars">
                                 <i className="fas fa-star"></i>
                                 <i className="fas fa-star"></i>

@@ -8,8 +8,9 @@ export default function HomeHeader() {
                     style={{ background: "url(./../home-slide-1.jpg) no-repeat" }}
                 >
                     <div className="content">
-                        <h3>Dr.B.R.Ambedkar School of Specialized Excellence</h3>
+                        <h3>Dr.B.R.Ambedkar School of Specialised Excellence</h3>
                         <p>HE-21 Century Skill</p>
+                        <p>Dwarka Sector-5</p>
                         {/*<a href="#" class="btn">Read more</a>*/}
                     </div>
                 </section>

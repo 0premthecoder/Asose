@@ -55,7 +55,7 @@ function Index() {
                             width={100}
                             height={100}
                         />
-                        <h3>Electro magnatic &amp; Production</h3>
+                        <h3>Electro Mechanical &amp; Production</h3>
                     </div>
                     <div className="box">
                         <Image
@@ -185,10 +185,10 @@ function Index() {
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <img src="/emp2.png" alt="" />
-                                <h3>Electro Machanical Production</h3>
+                                <h3>Electro Mechanical &amp;Production</h3>
                             </div>
                             <div className="content">
-                                <h3>Electro Magnatic &amp; Production</h3>
+                                <h3>Electro Mechanical &amp; Production</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?

@@ -127,7 +127,7 @@ function courses() {
           <div className="box">
             <div className="image">
               <img src="/robot skill.jpg" alt="" />
-              <h3>Robotices</h3>
+              <h3>Robotics</h3>
             </div>
             <div className="content">
               <h3>choose what's best for you!</h3>

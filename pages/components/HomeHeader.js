@@ -9,8 +9,8 @@ export default function HomeHeader() {
                 >
                     <div className="content">
                         <h3>Dr.B.R.Ambedkar School of Specialised Excellence</h3>
-                        <p>HE-21 Century Skill</p>
-                        <span>,Dwarka Sector-5</span>
+                        <p>HE-21 Century Skill
+,Dwarka Sector-5</p>
                         {/*<a href="#" class="btn">Read more</a>*/}
                     </div>
                 </section>

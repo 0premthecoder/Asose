@@ -1,13 +1,11 @@
 import Todo from "../../models/Todo"
 import connectdb from '../../middleware/mongoose'
-var jwt = require('jsonwebtoken');
+
 
 async function handler(req, res) {
     if (req.method === 'POST') {
-        const { title, description } = req.body
-        let token = localStorage.getItem('token')
-        var dec = jwt.decode(token)
-        let t = new Todo({ title: title, description: description, user: dec.email })
+        const { title, description, user } = req.body
+        let t = new Todo({ title: title, description: description, user: user })
         await t.save()
     }else{
         res.status(400).json({error: "Not allowed"});

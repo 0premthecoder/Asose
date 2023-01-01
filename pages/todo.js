@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+var jwt = require('jsonwebtoken');
 
 export default function Todo() {
     const [title, setTitle] = useState('')
@@ -15,7 +16,8 @@ export default function Todo() {
 
     const handelSubmit=(e)=>{
         e.preventDefault();
-        
+        let token = localStorage.getItem('token')
+        var dec = jwt.decode(token)
     }
     
   return (

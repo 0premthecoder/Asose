@@ -42,7 +42,7 @@ export default function Todo() {
             });
 
         }
-        setDesc(dec.email)
+        // setDesc(dec.email)
 
     }
     

@@ -15,12 +15,12 @@ export default function Todo() {
         }
     }
 
-    const handelSubmit=async (e)=>{
+    const handelSubmit = async (e) => {
         e.preventDefault();
         let token = localStorage.getItem('token')
-        var dec = jwt.decode(token)
-        const formBody = {title: title, description: desc, user: dec.email}
-        let res = await fetch('https://asose-prem0556.vercel.app/api/addtodo',{
+        let dec = jwt.decode(token)
+        const formBody = { title: title, description: desc, user: dec.email }
+        let res = await fetch('https://asose-prem0556.vercel.app/api/addtodo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -45,10 +45,10 @@ export default function Todo() {
         // setDesc(dec.email)
 
     }
-    
-  return (
-    <>
-    <ToastContainer
+
+    return (
+        <>
+            <ToastContainer
                 position="top-right"
                 autoClose={5000}
                 hideProgressBar={false}
@@ -60,19 +60,19 @@ export default function Todo() {
                 pauseOnHover
                 theme="dark"
             />
-       <h1>todo</h1>,
-        <h5>Welcome</h5>
-        <form onSubmit={handelSubmit} method='POST'>
-            <div>
-                <p><label htmlFor="email">Title</label></p>
-                <input value={title} onChange={handelChange} type="string" name="title" required />
-            </div>
-            <div>
-                <p><label htmlFor="email">Desc</label></p>
-                <input value={desc} onChange={handelChange} type="string" name="desc" required />
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </>
-  )
+            <h1>todo</h1>,
+            <h5>Welcome</h5>
+            <form onSubmit={handelSubmit} method='POST'>
+                <div>
+                    <p><label htmlFor="email">Title</label></p>
+                    <input value={title} onChange={handelChange} type="string" name="title" required />
+                </div>
+                <div>
+                    <p><label htmlFor="email">Desc</label></p>
+                    <input value={desc} onChange={handelChange} type="string" name="desc" required />
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </>
+    )
 }

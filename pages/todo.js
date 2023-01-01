@@ -14,7 +14,8 @@ export default function Todo() {
     }
 
     const handelSubmit=(e)=>{
-        console.log('l')
+        e.preventDefault();
+        
     }
     
   return (

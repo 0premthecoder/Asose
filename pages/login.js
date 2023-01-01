@@ -35,8 +35,6 @@ export default function login() {
                 theme: "dark",
             });
 
-            
-
         }
     }
     const handelChange = (e) => {

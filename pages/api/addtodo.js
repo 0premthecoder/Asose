@@ -5,9 +5,9 @@ var jwt = require('jsonwebtoken');
 async function handler(req, res) {
     if (req.method === 'POST') {
         const { title, description } = req.body
-        var dec = jwt.decode(response.token)
-
-        let t = new Todo({ title: title, description: description, user: req.user.id })
+        let token = localStorage.getItem('token')
+        var dec = jwt.decode(token)
+        let t = new Todo({ title: title, description: description, user: dec.email })
         await t.save()
     }else{
         res.status(400).json({error: "Not allowed"});

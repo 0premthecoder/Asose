@@ -12,12 +12,26 @@ export default function Todo() {
             setDesc(e.target.value);
         }
     }
+
+    const handelSubmit=(e)=>{
+        console.log('l')
+    }
     
   return (
     <>
-    122opwjsaklnj
-        <input type="text" value={title} name='title' onChange={handelChange} />
-        <input type="text" value={desc} name='desc' onChange={handelChange} />
+       <h1>signup</h1>,
+        <h5>Welcome</h5>
+        <form onSubmit={handelSubmit} method='POST'>
+            <div>
+                <p><label htmlFor="email">Title</label></p>
+                <input value={title} onChange={handelChange} type="string" name="title" required />
+            </div>
+            <div>
+                <p><label htmlFor="email">Desc</label></p>
+                <input value={desc} onChange={handelChange} type="string" name="desc" required />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </>
   )
 }

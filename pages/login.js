@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function login() {
     const [email, setEmail] = useState('');
-    const [name, setName] = useState('');
     const [password, setPassword] = useState('');
 
     console.log("response")
@@ -35,8 +34,8 @@ export default function login() {
                 progress: undefined,
                 theme: "dark",
             });
-            var dec = jwt.decode(response.token)
-            console.log(dec)
+
+            
 
         }
     }

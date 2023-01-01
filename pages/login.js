@@ -35,7 +35,7 @@ export default function login() {
                 progress: undefined,
                 theme: "dark",
             });
-            // var dec = jwt.decode(response.token)
+            var dec = jwt.decode(response.token)
             console.log(dec)
 
         }

@@ -14,7 +14,7 @@ export default function login() {
     const handelSubmit = async (e) => {
         e.preventDefault();
         const formBody = { email: email, password: password }
-        let res = await fetch('http://localhost:3000/api/login', {
+        let res = await fetch('http://127.0.0.1:3000/api/login', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -61,6 +61,7 @@ export default function login() {
                 pauseOnHover
                 theme="dark"
             />
+            
             <h1>sign-in</h1>,
             <h5>Welcome</h5>
             <form onSubmit={handelSubmit} method='POST'>

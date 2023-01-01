@@ -30,7 +30,7 @@ export default function Todo() {
         let response = await res.json()
         if (response.success) {
             // localStorage.setItem('token', response.token)
-            toast.success('Todo added', {
+            toast.success('🦄 added Successfully!', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -60,6 +60,7 @@ export default function Todo() {
                 pauseOnHover
                 theme="dark"
             />
+
             <h1>todo</h1>,
             <h5>Welcome</h5>
             <form onSubmit={handelSubmit} method='POST'>

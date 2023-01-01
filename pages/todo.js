@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 var jwt = require('jsonwebtoken');
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Todo() {
     const [title, setTitle] = useState('')
@@ -20,7 +21,7 @@ export default function Todo() {
         let token = localStorage.getItem('token')
         let dec = jwt.decode(token)
         const formBody = { title: title, description: desc, user: dec.email }
-        let res = await fetch('https://asose-prem0556.vercel.app/api/addtodo', {
+        let res = await fetch('http://127.0.0.1:3000/api/addtodo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

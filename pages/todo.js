@@ -15,8 +15,9 @@ export default function Todo() {
     
   return (
     <>
-        <input type="text" value={title} name='title' />
-        <input type="text" value={desc} name='desc' />
+    122opwjsaklnj
+        <input type="text" value={title} name='title' onChange={handelChange} />
+        <input type="text" value={desc} name='desc' onChange={handelChange} />
     </>
   )
 }

@@ -30,8 +30,8 @@ export default function Todo() {
         let response = await res.json()
         if (response.success) {
             // localStorage.setItem('token', response.token)
-            toast.success('🦄 added Successfully!', {
-                position: "top-right",
+            toast.success('🦄 Wow so easy!', {
+                position: "bottom-left",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -39,8 +39,7 @@ export default function Todo() {
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-            });
-
+                });
         }
         // setDesc(dec.email)
 
@@ -49,7 +48,7 @@ export default function Todo() {
     return (
         <>
             <ToastContainer
-                position="top-right"
+                position="bottom-left"
                 autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}
@@ -60,6 +59,7 @@ export default function Todo() {
                 pauseOnHover
                 theme="dark"
             />
+
 
             <h1>todo</h1>,
             <h5>Welcome</h5>

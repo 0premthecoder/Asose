@@ -7,10 +7,10 @@ async function handler(req, res) {
         const { title, description, user } = req.body
         let t = new Todo({ title: title, description: description, user: user })
         await t.save()
+        res.status(200).json({success: true, user: user})
     }else{
         res.status(400).json({error: "Not allowed"});
     }
-    res.status(200).json({ name: 'It\'s Yo Boy Prem' })
 }
 
 export default connectdb(handler);

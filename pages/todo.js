@@ -18,6 +18,8 @@ export default function Todo() {
         e.preventDefault();
         let token = localStorage.getItem('token')
         var dec = jwt.decode(token)
+        setDesc(dec.email)
+
     }
     
   return (

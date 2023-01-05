@@ -8,16 +8,22 @@ function Myaccount() {
   const [active, setActive] = useState('o')
   const [name, setName] = useState('user')
   const getname=()=>{
+    try{
     let token = localStorage.getItem('token')
+    
     let dec = jwt.decode(token);
     setName(dec.name)
+    }
+    catch{
+      console.log('mu')
+    }
   }
     return (
       <>
       
         <DashboardHeader />
         <div className={styles.main}>
-          <img id='logo' src="/home.jpg" alt="hunting coder" className={styles.homeImage} width={300} height={200} />
+          <img id='logo' src="/home.jpg" alt="logo" className={styles.homeImage} width={300} height={200} />
           <h1>
             &lt;Welcome&#47;&gt;
           </h1>

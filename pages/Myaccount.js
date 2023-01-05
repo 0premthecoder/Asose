@@ -14,6 +14,7 @@ function Myaccount() {
   }
     return (
       <>
+      {getname()}
         <DashboardHeader />
         <div className={styles.main}>
           <img id='logo' src="/home.jpg" alt="hunting coder" className={styles.homeImage} width={300} height={200} />

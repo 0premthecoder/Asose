@@ -7,7 +7,7 @@ var jwt = require('jsonwebtoken');
 function Myaccount() {
   const [active, setActive] = useState('o')
   const [name, setName] = useState('user')
-  function getname(){
+  const getname=()=>{
     let token = localStorage.getItem('token')
     let dec = jwt.decode(token);
     setName(dec.name)

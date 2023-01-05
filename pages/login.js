@@ -14,7 +14,7 @@ export default function login() {
     const handelSubmit = async (e) => {
         e.preventDefault();
         const formBody = { email: email, password: password }
-        let res = await fetch('http://127.0.0.1:3000/api/login', {
+        let res = await fetch('https://prem0556-potential-adventure-g6w79grp9qx2p4q9-3000.preview.app.github.dev//api/login', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

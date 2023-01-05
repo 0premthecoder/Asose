@@ -5,7 +5,7 @@ import styles from './../styles/Dashboard.module.css'
 import Overview from './components/Overview'
 function Myaccount() {
   const [active, setActive] = useState('o')
-  if (localStorage.getItem('token')) {
+  // if (localStorage.getItem('token')) {
     return (
       <>
         <DashboardHeader />
@@ -37,9 +37,9 @@ function Myaccount() {
       </>
     )
   }
-  else {
-    return <>login First</>
-  }
-}
+//   else {
+//     return <>login First</>
+//   }
+// }
 
 export default Myaccount

@@ -14,14 +14,14 @@ function Myaccount() {
   }
     return (
       <>
-      {getname()}
+      
         <DashboardHeader />
         <div className={styles.main}>
           <img id='logo' src="/home.jpg" alt="hunting coder" className={styles.homeImage} width={300} height={200} />
           <h1>
             &lt;Welcome&#47;&gt;
           </h1>
-          <h2 style={{ "color": '#0eb582' }}>{name}</h2>
+          <h2 style={{ "color": '#0eb582' }} onclick{()=>{getname()}>{name}</h2>
 
           <div className={styles.grid}>
             <h4 className={active === 'o' ? styles.active : ''} onClick={() => setActive('o')}>Overview</h4>

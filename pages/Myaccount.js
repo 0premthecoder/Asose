@@ -35,7 +35,7 @@ function Myaccount() {
         </div>
         {active === 'o' ? <Overview /> : ''}
         {active === 'a' ? <h3>coming soon</h3> : ''}
-        {active === 't' ? <h3>We are Working on it</h3> : ''}
+        {active === 't' ? <h3>Under Devlopment</h3> : ''}
       </div>
 
       <footer className={styles.footer}>

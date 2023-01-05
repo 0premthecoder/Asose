@@ -6,8 +6,12 @@ import Overview from './components/Overview'
 var jwt = require('jsonwebtoken');
 function Myaccount() {
   const [active, setActive] = useState('o')
-  let token = localStorage.getItem('token')
-  let dec = jwt.decode(token);
+  const [name, setName] = useState('user')
+  function getname(){
+    let token = localStorage.getItem('token')
+    let dec = jwt.decode(token);
+    setName(dec.name)
+  }
     return (
       <>
         <DashboardHeader />
@@ -16,7 +20,7 @@ function Myaccount() {
           <h1>
             &lt;Welcome&#47;&gt;
           </h1>
-          <h2 style={{ "color": '#0eb582' }}>{dec.name}</h2>
+          <h2 style={{ "color": '#0eb582' }}>{name}</h2>
 
           <div className={styles.grid}>
             <h4 className={active === 'o' ? styles.active : ''} onClick={() => setActive('o')}>Overview</h4>

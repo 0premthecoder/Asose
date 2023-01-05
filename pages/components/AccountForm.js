@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/router'
 
 export default function AccountForm(props) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const router = useRouter()
 
     const handelSubmitSignup = async (e) => {
         e.preventDefault();
@@ -75,7 +77,8 @@ export default function AccountForm(props) {
             });
             // var dec = jwt.decode(response.token)
             // console.log(dec)
-
+            props.togglepage(false)
+            router.push('/Myaccount')
         }
     }
     return (<>

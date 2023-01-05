@@ -1,40 +1,21 @@
 import React, { useState } from "react";
 import AccountForm from "./AccountForm";
 import Link from 'next/link'
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
+import { useRouter } from 'next/router'
 function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const [navactive, setNavactive] = useState('')
+    const router = useRouter()
     const togglepage = (active) => {
         if (!localStorage.getItem('token')) {
             setIsOpen(active)
         } else {
-            toast.info('🦄 Already Logged in!', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
+            router.push('/Myaccount')
             setIsOpen(false)
         }
     }
     return <>
-        <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-        />
         <header className="header">
             <Link href="/" className="logo">
                 {" "}

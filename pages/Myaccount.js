@@ -3,9 +3,11 @@ import DashboardHeader from './components/DashboardHeader'
 // import Link from 'next/link'
 import styles from './../styles/Dashboard.module.css'
 import Overview from './components/Overview'
+var jwt = require('jsonwebtoken');
 function Myaccount() {
   const [active, setActive] = useState('o')
-  // if (localStorage.getItem('token')) {
+  let token = localStorage.getItem('token')
+  let dec = jwt.decode(token);
     return (
       <>
         <DashboardHeader />
@@ -14,7 +16,7 @@ function Myaccount() {
           <h1>
             &lt;Welcome&#47;&gt;
           </h1>
-          <h2 style={{ "color": '#0eb582' }}>User</h2>
+          <h2 style={{ "color": '#0eb582' }}>{dec.name}</h2>
 
           <div className={styles.grid}>
             <h4 className={active === 'o' ? styles.active : ''} onClick={() => setActive('o')}>Overview</h4>
@@ -37,11 +39,5 @@ function Myaccount() {
       </>
     )
   }
-//   else {
-//     return <>login First</>
-//   }
-// }
-
-
 
 export default Myaccount

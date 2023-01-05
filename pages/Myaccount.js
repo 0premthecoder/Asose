@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import DashboardHeader from './components/DashboardHeader'
-import Link from 'next/link'
+// import Link from 'next/link'
 import styles from './../styles/Dashboard.module.css'
 import Overview from './components/Overview'
 function Myaccount() {
   const [active, setActive] = useState('o')
+  if(localStorage.getItem('token') != 'null'){
   return (
     <>
       <DashboardHeader />
@@ -35,6 +36,10 @@ function Myaccount() {
       </footer>
     </>
   )
+}
+else{
+  return <>login First</>
+}
 }
 
 export default Myaccount

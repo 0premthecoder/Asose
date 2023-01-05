@@ -13,7 +13,7 @@ export default function DashboardHeader() {
                 <Link href={'/'}><li><i className="fa fa-user-secret" aria-hidden="true"></i>
                 </li></Link>
                 <Link href={'/blog'}><li><i className="fa fa-book" aria-hidden="true"></i></li></Link>
-                <Link href={'/contact'}><li><i className="fa fa-user-times" aria-hidden="true"></i></li></Link>
+                <Link href={'/logout'}><li><i className="fa fa-user-times" aria-hidden="true"></i></li></Link>
             </ul>
         </nav>
     </>

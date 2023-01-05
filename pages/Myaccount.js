@@ -5,7 +5,7 @@ import styles from './../styles/Dashboard.module.css'
 import Overview from './components/Overview'
 function Myaccount() {
   const [active, setActive] = useState('o')
-  if (localStorage.getItem('token') === 'null') {
+  if (localStorage.getItem('token') !== 'null') {
     return (
       <>
         <DashboardHeader />

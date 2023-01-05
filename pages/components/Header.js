@@ -42,7 +42,7 @@ function Header() {
             </Link>
             <nav className={`navbar ${navactive}`}>
                 <div id="close-navbar" className="fas fa-times" onClick={() => setNavactive('')} />
-                <Link href='/Myaccount'>Home</Link>
+                <Link href='/'>Home</Link>
                 <Link href="/about">About</Link>
                 <Link href="/courses">Courses</Link>
                 <Link href="/contact">Contact</Link>

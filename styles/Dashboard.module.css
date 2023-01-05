@@ -13,6 +13,25 @@
     justify-content: flex-start;
     padding-top: 3rem;
   }
+
+  .main h1{
+    font-size: 5rem;
+  }
+
+  .main h2{
+    font-size: 4rem;
+  }
+  .main h3{
+    font-size: 3rem;
+  }
+  .main h4{
+    margin: 20px;
+    padding: 4px;
+  }
+  .active{
+    border-bottom: 2px solid #0eb582;
+  }
+
   
   .footer {
     display: flex;
@@ -31,7 +50,7 @@
   }
   
   .title a {
-    color: #0070f3;
+    color: #0eb582;
     text-decoration: none;
   }
   
@@ -91,8 +110,8 @@
   .card:hover,
   .card:focus,
   .card:active {
-    color: #0070f3;
-    border-color: #0070f3;
+    color: #0eb582;
+    border-color: #0eb582;
   }
   
   .card h2 {
@@ -124,11 +143,11 @@
     justify-content: end;
     font-size: 2rem;
     position: sticky;
-    background: #a0a5ab;
+    background: #efefef;
     top: 0;
     bottom: 0;
     opacity: 80%;
-    color: rgb(1, 0, 0);
+    /* color: #0eb582; */
     padding: 5px;
 }
 
@@ -138,7 +157,7 @@
   }
   
   .mainnav li:hover {
-    color: #0070f3;
+    color: #0eb582;
   }
   
   .mainnav li {

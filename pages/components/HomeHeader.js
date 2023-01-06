@@ -12,6 +12,7 @@ export default function HomeHeader() {
                         <p>HE-21 Century Skill
 ,Dwarka Sector-5</p>
                         {/*<a href="#" class="btn">Read more</a>*/}
+
                     </div>
                 </section>
             </div>

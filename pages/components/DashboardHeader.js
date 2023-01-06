@@ -30,7 +30,7 @@ export default function DashboardHeader() {
                 <div id="close-navbar" className="fas fa-times" onClick={() => setNavactive('')} />
                 <Link href='/'><i className="fa fa-user-secret" aria-hidden="true"></i></Link>
                 <Link href="/Myaccount"><i className="fa fa-book" aria-hidden="true"></i></Link>
-                <li href="/"><i className="fa fa-user-times" aria-hidden="true" onClick={()=> logout()}></i></li>
+                <Link href="/"><i className="fa fa-user-times" aria-hidden="true" onClick={()=> logout()}></i></Link>
                 {/* <Link href="/contact">Contact</Link> */}
             </nav>
             <div className="icons">

@@ -5,16 +5,21 @@ import styles from './../styles/Dashboard.module.css'
 import Overview from './components/Overview'
 var jwt = require('jsonwebtoken');
 import { useEffect } from "react";
+import {useRouter} from 'next/router';
 
 function Myaccount() {
   const [active, setActive] = useState('o')
   const [name, setName] = useState('user')
-
+  const router = useRouter()
   useEffect(() => {
     // Perform localStorage action
-    // const token = localStorage.getItem('token')
-    // let dec = jwt.decode(token)
-    // setName(dec.name)
+    const token = localStorage.getItem('token')
+    if(!token){
+      router.push('/')
+    }
+    let dec = jwt.decode(token)
+    
+    setName(dec.name)
   }, [])
 
   return (

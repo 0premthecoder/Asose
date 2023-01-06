@@ -12,9 +12,9 @@ function Myaccount() {
 
   useEffect(() => {
     // Perform localStorage action
-    const token = localStorage.getItem('token')
-    let dec = jwt.decode(token)
-    setName(dec.name)
+    // const token = localStorage.getItem('token')
+    // let dec = jwt.decode(token)
+    // setName(dec.name)
   }, [])
 
   return (

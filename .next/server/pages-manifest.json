@@ -1,25 +1,6 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/Myaccount": "pages/Myaccount.js",
-  "/about": "pages/about.js",
-  "/api/addtodo": "pages/api/addtodo.js",
-  "/api/fetchtodo": "pages/api/fetchtodo.js",
-  "/api/login": "pages/api/login.js",
-  "/api/hello": "pages/api/hello.js",
-  "/api/signup": "pages/api/signup.js",
-  "/components/AccountForm": "pages/components/AccountForm.js",
-  "/components/DashboardHeader": "pages/components/DashboardHeader.js",
-  "/components/Footer": "pages/components/Footer.js",
-  "/components/Header": "pages/components/Header.js",
-  "/components/HomeHeader": "pages/components/HomeHeader.js",
-  "/components/Overview": "pages/components/Overview.js",
-  "/components/Top": "pages/components/Top.js",
-  "/contact": "pages/contact.js",
-  "/courses": "pages/courses.js",
-  "/": "pages/index.js",
-  "/login": "pages/login.js",
-  "/signup": "pages/signup.js",
-  "/todo": "pages/todo.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/Myaccount": "pages/Myaccount.js"
 }

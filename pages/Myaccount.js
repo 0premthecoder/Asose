@@ -14,9 +14,6 @@ function Myaccount() {
   useEffect(() => {
     // Perform localStorage action
     const token = localStorage.getItem('token')
-    if(!token){
-      router.push('/')
-    }
     let dec = jwt.decode(token)
     
     setName(dec.name)

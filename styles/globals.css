@@ -182,14 +182,14 @@ a:-webkit-any-link {
            transform: rotate(90deg);
  }
  
- .header .navbar a {
+ .header .navbar a, .header .navbar li {
    margin-right: 2rem;
    font-size: 2rem;
    text-transform: capitalize;
    color: #444;
  }
  
- .header .navbar a:hover {
+ .header .navbar a:hover,.header .navbar li:hover {
    color: #0eb582;
  }
  

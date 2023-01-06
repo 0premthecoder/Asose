@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import DashboardHeader from './components/DashboardHeader'
-// import Link from 'next/link'
 import styles from './../styles/Dashboard.module.css'
 import Overview from './components/Overview'
 var jwt = require('jsonwebtoken');
 import { useEffect } from "react";
 import {useRouter} from 'next/router';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Myaccount() {
   const [active, setActive] = useState('o')
@@ -17,10 +19,32 @@ function Myaccount() {
     let dec = jwt.decode(token)
     
     setName(dec.name)
+    toast.success('🦄 User Logined Successfully!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+  });
   }, [])
 
   return (
     <>
+    <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
 
       <DashboardHeader />
       <div className={styles.main}>

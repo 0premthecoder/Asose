@@ -2,8 +2,14 @@ import React, { useState } from 'react'
 import styles from '../../styles/Todo.module.css'
 export default function Todo() {
     const convertToNextClassName = (className) => className.split(' ').map(c => styles[c]).join(' ')// change class name
-    const [show, setShow] = useState('')
-    const [active, setActive] = useState('')
+    const [show, setShow] = useState('')// showing Menubar for delete and update todo
+    const [active, setActive] = useState('')// showing button
+
+    // variables for todos
+    const [todo, setTodo] = useState('')
+    const [pending, setPending] = useState(true)
+    const [user, setUser] = useState()
+
 
     return (
         <div className={styles.wrapper}>

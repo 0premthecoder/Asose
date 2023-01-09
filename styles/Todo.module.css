@@ -33,6 +33,12 @@ body{
   top: 50%;
   position: absolute;
   transform: translate(17px, -50%);
+  color: #000100;
+  cursor: pointer;
+}
+
+.taskInput i:hover{
+    color: #3cff59;
 }
 .taskInput input{
   height: 100%;
@@ -174,7 +180,7 @@ body{
   bottom: -65px;
   transform-origin: top right;
 }
-.taskMenu.show{
+.show{
   transform: scale(1);
 }
 .taskMenu li{

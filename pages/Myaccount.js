@@ -4,7 +4,6 @@ import styles from './../styles/Dashboard.module.css'
 import Overview from './components/Overview'
 var jwt = require('jsonwebtoken');
 import { useEffect } from "react";
-import {useRouter} from 'next/router';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Todo from './components/Todo';
@@ -13,24 +12,23 @@ import Todo from './components/Todo';
 function Myaccount() {
   const [active, setActive] = useState('o')
   const [name, setName] = useState('user')
-  // const router = useRouter()
-  // useEffect(() => {
-  //   // Perform localStorage action
-  //   const token = localStorage.getItem('token')
-  //   let dec = jwt.decode(token)
+  useEffect(() => {
+    // Perform localStorage action
+    const token = localStorage.getItem('token')
+    let dec = jwt.decode(token)
     
-  //   setName(dec.name)
-  //   toast.success('🦄 User Logined Successfully!', {
-  //     position: "top-right",
-  //     autoClose: 5000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //     theme: "dark",
-  // });
-  // }, [])
+    setName(dec.name)
+    toast.success('🦄 User Logined Successfully!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+  });
+  }, [])
 
   return (
     <>

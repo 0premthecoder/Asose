@@ -27,65 +27,7 @@ function Index() {
             <HomeHeader />
             {/* home section ends */}
             {/* subjects section starts  */}
-            <section className="subjects">
-                <h1 className="heading">our popular subjects</h1>
-                <div className="box-container">
-                    <div className="box">
-                        <Image
-                            src="/dmd.png"
-                            alt="Picture of the author"
-                            width={100}
-                            height={100}
-                        />
-                        <h3>Digital Media &amp; Design</h3>
-                    </div>
-                    <div className="box">
-                        <Image
-                            src="/finance.png"
-                            alt="Picture of the author"
-                            width={100}
-                            height={100}
-                        />
-                        <h3>Finance &amp; Accounting</h3>
-                    </div>
-                    <div className="box">
-                        <Image
-                            src="/emp.png"
-                            alt="Picture of the author"
-                            width={100}
-                            height={100}
-                        />
-                        <h3>Electro Mechanical &amp; Production</h3>
-                    </div>
-                    <div className="box">
-                        <Image
-                            src="/Coding logo.png"
-                            alt="Picture of the author"
-                            width={100}
-                            height={100}
-                        />
-                        <h3>Coding</h3>
-                    </div>
-                    <div className="box">
-                        <Image
-                            src="/fashion.png"
-                            alt="Picture of the author"
-                            width={100}
-                            height={100}
-                        />
-                        <h3>Fashion Designing</h3>
-                    </div>
-                    <div className="box">
-                        <Image
-                            src="/robo.png"
-                            alt="Picture of the author"
-                            width={100}
-                            height={100}
-                        />
-                        <h3>Robotics</h3>
-                    </div>
-                </div>
-            </section>
+           
             {/* subjects section ends */}
             {/* home courses slider section starts  */}
             <section className="home-courses .home-courses-slider" >

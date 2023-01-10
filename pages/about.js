@@ -4,6 +4,7 @@ import "swiper/css/bundle";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Footer from "./components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 function About() {
     return (
         <>
@@ -13,35 +14,68 @@ function About() {
                 <p> <Link href="/">home</Link> / about </p>
             </section>
 
-            <section className="about" >
 
-                <div className="image">
-                    <img src="/about-img.jpg" alt="" />
-                </div>
-
-                <div className="content">
-                    <h3 className="about-title">we have best skill courses for you</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam hic magnam fugit exercitationem neque, quae laboriosam natus. Ut maxime assumenda facere ea quasi accusamus dolores delectus tempora animi, expedita iste.</p>
-                    <div className="icons-container">
-                        <div className="icons">
-                            <img src="/about-icon-1.png" alt="" />
-                            <h3>6+</h3>
-                            <span>skill courses</span>
-                        </div>
-                        <div className="icons">
-                            <img src="/about-icon-2.png" alt="" />
-                            <h3>300+</h3>
-                            <span>students</span>
-                        </div>
-                        <div className="icons">
-                            <img src="/about-icon-3.png" alt="" />
-                            <h3>10+</h3>
-                            <span>awards</span>
-                        </div>
+            <section className="subjects">
+                <h1 className="heading">We Have Best Skill Courses For You</h1>
+                <div className="box-container">
+                    <div className="box">
+                        <Image
+                            src="/dmd.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                        <h3>Digital Media &amp; Design</h3>
+                    </div>
+                    <div className="box">
+                        <Image
+                            src="/finance.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                        <h3>Finance &amp; Accounting</h3>
+                    </div>
+                    <div className="box">
+                        <Image
+                            src="/emp.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                        <h3>Electro Mechanical &amp; Production</h3>
+                    </div>
+                    <div className="box">
+                        <Image
+                            src="/Coding logo.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                        <h3>Coding</h3>
+                    </div>
+                    <div className="box">
+                        <Image
+                            src="/fashion.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                        <h3>Fashion Designing</h3>
+                    </div>
+                    <div className="box">
+                        <Image
+                            src="/robo.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                        <h3>Robotics</h3>
                     </div>
                 </div>
-
             </section>
+
+            
             {/* about section ends */}
 
             {/* teachers section starts  */}

@@ -10,13 +10,40 @@ export default function Todo() {
     const [pending, setPending] = useState(true)
     const [user, setUser] = useState()
 
+    useEffect(() => {
+        // Perform localStorage action
+        const token = localStorage.getItem('token')
+        let dec = jwt.decode(token)
+        setUser(dec.email)
+        
+      }, [])
+
+    const handelChange = (e) => {
+        if (e.target.name === "todo") {
+            setTodo(e.target.value);
+        }
+        
+    }
+
+    const handelSubmit= async (e)=>{
+        e.preventDefault();
+        const formBody = { user: user, todo: todo }
+
+        let res = await fetch(process.env.NEXT_PUBLIC_ADDTODO_API_URL, {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formBody),
+        })
+    }
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.taskInput}>
                 <i class="fa fa-check" aria-hidden="true"></i>
 
-                <input type="text" placeholder="Add a new task" />
+                <input type="text" name='todo' onChange={handelChange} value={todo} placeholder="Add a new task" />
             </div>
             <div className={styles.controls}>
                 <div className={styles.filters}>

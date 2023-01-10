@@ -28,8 +28,8 @@ export default function Todo() {
             body: JSON.stringify({user: user}),
 
         })
-
-        console.log(res)
+        let data = await res.json()
+        setTodos(data)
         
       }, [])
 
@@ -74,10 +74,10 @@ export default function Todo() {
                 }}>Clear All</button>
             </div>
             <ul className={styles.taskBox}>
-                {todo && <li className={styles.task}>
+                {todos && todos.map ((todoItem) => { <li className={styles.task}>
                     <label for="${id}">
                         <input onclick="updateStatus(this)" type="checkbox" id="${id}" />
-                        <p className="${completed}">Hello Wallo</p>
+                        <p className="${completed}">{todoItem.todo}</p>
                     </label>
                     <div className={styles.settings}>
                         <i className="fa fa-wrench" onClick={show === 'show' ? () => setShow('') : () => setShow('show')} aria-hidden="true"></i>
@@ -86,7 +86,7 @@ export default function Todo() {
                             <li onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash"></i>Delete</li>
                         </ul>
                     </div>
-                </li>}
+                </li>})}
             </ul>
         </div>
 

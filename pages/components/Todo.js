@@ -12,12 +12,24 @@ export default function Todo() {
     const [todo, setTodo] = useState('')
     const [pending, setPending] = useState(true)
     const [user, setUser] = useState()
+    const [todos, setTodos] = useState()
 
-    useEffect(() => {
+    useEffect( async () => {
         // Perform localStorage action
         const token = localStorage.getItem('token')
         let dec = jwt.decode(token)
         setUser(dec.email)
+
+        let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({user: user}),
+
+        })
+
+        console.log(res)
         
       }, [])
 
@@ -32,13 +44,15 @@ export default function Todo() {
         e.preventDefault();
         const formBody = { user: user, todo: todo }
 
-        let res = await fetch(process.env.NEXT_PUBLIC_ADDTODO_API_URL, {
+        await fetch(process.env.NEXT_PUBLIC_ADDTODO_API_URL, {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formBody),
         })
+
+              
     }
 
     return (
@@ -60,7 +74,7 @@ export default function Todo() {
                 }}>Clear All</button>
             </div>
             <ul className={styles.taskBox}>
-                <li className={styles.task}>
+                {todo && <li className={styles.task}>
                     <label for="${id}">
                         <input onclick="updateStatus(this)" type="checkbox" id="${id}" />
                         <p className="${completed}">Hello Wallo</p>
@@ -72,7 +86,7 @@ export default function Todo() {
                             <li onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash"></i>Delete</li>
                         </ul>
                     </div>
-                </li>
+                </li>}
             </ul>
         </div>
 

@@ -6,8 +6,7 @@ export default function Footer() {
             <div className="box">
                 <h3> ASOSE</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi,
-                    voluptatem.
+                Social Media Handles :)
                 </p>
                 <div className="share">
                     <a href="#" className="fab fa-facebook-f" />

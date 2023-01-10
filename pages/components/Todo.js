@@ -74,7 +74,9 @@ export default function Todo() {
                 }}>Clear All</button>
             </div>
             <ul className={styles.taskBox}>
-                {todos && todos.map ((todoItem) => { <li className={styles.task}>
+                {todos.map ((todoItem) => { 
+                    console.log(todoItem)
+                    return <li className={styles.task}>
                     <label for="${id}">
                         <input onclick="updateStatus(this)" type="checkbox" id="${id}" />
                         <p className="${completed}">{todoItem.todo}</p>

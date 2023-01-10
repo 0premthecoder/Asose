@@ -41,7 +41,7 @@ export default function Todo() {
     return (
         <div className={styles.wrapper}>
             <div className={styles.taskInput}>
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa fa-check" onClick={handelSubmit} aria-hidden="true"></i>
 
                 <input type="text" name='todo' onChange={handelChange} value={todo} placeholder="Add a new task" />
             </div>

@@ -3,7 +3,7 @@ import connectdb from '../../middleware/mongoose'
 
 
 async function handler(req, res) {
-    if (req.method === 'GET') {
+    if (req.method === 'POST') {
         let todo = await Todo.find({ user: req.body.user })
         res.status(200).json(todo)
     }else{

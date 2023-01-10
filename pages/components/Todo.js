@@ -21,7 +21,7 @@ export default function Todo() {
         setUser(dec.email)
 
         let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },

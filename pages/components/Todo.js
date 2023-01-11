@@ -62,7 +62,20 @@ export default function Todo() {
             body: JSON.stringify(formBody),
         })
 
-        showTodo()
+        const formBodyFetch = { user: dec.email}
+            console.log(formBodyFetch)
+            let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formBodyFetch),
+    
+            })
+            // console.log(res)
+            let data = await res.json()
+            // console.log(data)
+            setTodos(data)
     }
 
     return (

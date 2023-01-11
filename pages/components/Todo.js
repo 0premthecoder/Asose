@@ -14,24 +14,34 @@ export default function Todo() {
     const [user, setUser] = useState()
     const [todos, setTodos] = useState()
 
-    useEffect( async () => {
+    useEffect( () => {
         // Perform localStorage action
         const token = localStorage.getItem('token')
         let dec = jwt.decode(token)
         setUser(dec.email)
+        const showTodo = async () =>{ 
+            const formBodyFetch = { user: dec.email}
+            console.log(formBodyFetch)
+            let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formBodyFetch),
+    
+            })
+            console.log(res)
+            let data = await res.json()
+            console.log(data)
+            setTodos(data)
+        }
 
-        let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({user: user}),
-
-        })
-        let data = await res.json()
-        setTodos(data)
+        showTodo()
         
       }, [])
+    
+
+    
 
     const handelChange = (e) => {
         if (e.target.name === "todo") {
@@ -52,13 +62,13 @@ export default function Todo() {
             body: JSON.stringify(formBody),
         })
 
-              
+        showTodo()
     }
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.taskInput}>
-                <i class="fa fa-check" onClick={handelSubmit} aria-hidden="true"></i>
+                <i className="fa fa-check" onClick={handelSubmit} aria-hidden="true"></i>
 
                 <input type="text" name='todo' onChange={handelChange} value={todo} placeholder="Add a new task" />
             </div>
@@ -70,22 +80,22 @@ export default function Todo() {
                 </div>
                 <button className={styles.clearBtn} style={{
                     "opacity": "0.9",
-                    "pointer-events": "auto"
+                    "pointerEvents": "auto"
                 }}>Clear All</button>
             </div>
             <ul className={styles.taskBox}>
-                {todos.map ((todoItem) => { 
+                {todos && todos.map ((todoItem) => { 
                     console.log(todoItem)
                     return <li className={styles.task}>
-                    <label for="${id}">
+                    <label htmlFor="${id}">
                         <input onclick="updateStatus(this)" type="checkbox" id="${id}" />
                         <p className="${completed}">{todoItem.todo}</p>
                     </label>
                     <div className={styles.settings}>
                         <i className="fa fa-wrench" onClick={show === 'show' ? () => setShow('') : () => setShow('show')} aria-hidden="true"></i>
                         <ul className={convertToNextClassName(`taskMenu`)} style={show === 'show' ? { "transform": "scale(1)" } : {}}>
-                            <li onclick='editTask(${id}, "${todo.name}")'><i class="uil uil-pen"></i>Edit</li>
-                            <li onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash"></i>Delete</li>
+                            <li onclick='editTask(${id}, "${todo.name}")'><i className="uil uil-pen"></i>Edit</li>
+                            <li onclick='deleteTask(${id}, "${filter}")'><i className="uil uil-trash"></i>Delete</li>
                         </ul>
                     </div>
                 </li>})}

@@ -6,14 +6,19 @@ import "swiper/css/bundle";
 import Image from 'next/image'
 import Footer from './components/Footer';
 import styles from './../styles/Home.module.css'
+import { createClient } from "next-sanity";
+import Link from 'next/link';
+
 // Images
 
-function Index() {
+function Index({result}) {
     const [showForm, SetshowForm] = useState(false);
     const passData = bool => {
         SetshowForm(bool);
         console.log(showForm)
     };
+
+    console.log(result);
 
     return (
         // <React.Fragment>
@@ -23,7 +28,7 @@ function Index() {
             {/* account form section ends */}
             {/* header section ends */}
             {/* home section starts  */}
-            <Header/>
+            <Header />
             <HomeHeader />
             {/* home section ends */}
             {/* subjects section starts  */}
@@ -113,9 +118,9 @@ function Index() {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="coding.html" className={styles.btn}>
+                                <Link href="/blog/coding" className={styles.btn}>
                                     read more
-                                </a>
+                                </Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
@@ -204,7 +209,7 @@ function Index() {
 
 
             <Footer />
-    </>
+        </>
     )
 }
 
@@ -212,5 +217,20 @@ function Index() {
 export default Index
 
 
+export async function getServerSideProps(context) {
+    const client = createClient({
+        projectId: "2paqrnsj",
+        dataset: "production",
+        useCdn: true
+    })
 
+    const query = '*[_type =="post"]'
+    const result = await client.fetch(query)
+
+    return {
+        props: {
+            result
+        }
+    }
+}
 

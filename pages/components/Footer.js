@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="box">
                 <h3> ASOSE</h3>
                 <p>
-                Social Media Handles :)
+                Our Social Media Handles :)
                 </p>
                 <div className="share">
                     <a href="#" className="fab fa-facebook-f" />

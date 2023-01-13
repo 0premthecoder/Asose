@@ -52,8 +52,7 @@ function Index() {
                             <div className="content">
                                 <h3>Coding</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-                                    ratione?
+                                Coding is the process of writing instructions to a computer in a language that it can understand and execute.
                                 </p>
                                 <a href="coding.html" className={styles.btn}>
                                     read more
@@ -68,8 +67,7 @@ function Index() {
                             <div className="content">
                                 <h3>Robotics</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-                                    ratione?
+                                Robotics is the engineering science and technology of creating robots and systems for automation and performing complex tasks.
                                 </p>
                                 <a href="robotics.html" className={styles.btn}>
                                     read more
@@ -84,8 +82,7 @@ function Index() {
                             <div className="content">
                                 <h3>Fashion Designing</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-                                    ratione?
+                                Creating unique garments and accessories that express personal style and reflect current trends.
                                 </p>
                                 <a href="fashion.html" className={styles.btn}>
                                     read more
@@ -100,8 +97,7 @@ function Index() {
                             <div className="content">
                                 <h3>Digital Media &amp; Design</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-                                    ratione?
+                                Digital Media & Designing is the art of creating digital content and visual designs to communicate ideas and messages through digital media.
                                 </p>
                                 <a href="dmd.html" className={styles.btn}>
                                     read more
@@ -116,8 +112,7 @@ function Index() {
                             <div className="content">
                                 <h3>Finance &amp; Accounting</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-                                    ratione?
+                                Finance and accounting involve the management of money and resources through budgeting, forecasting, and analyzing financial data.
                                 </p>
                                 <a href="Finance.html" className={styles.btn}>
                                     read more
@@ -132,8 +127,7 @@ function Index() {
                             <div className="content">
                                 <h3>Electro Mechanical &amp; Production</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-                                    ratione?
+                                The process of creating products using electrical and mechanical components to assemble parts, materials, and systems.
                                 </p>
                                 <a href="emp.html" className={styles.btn}>
                                     read more

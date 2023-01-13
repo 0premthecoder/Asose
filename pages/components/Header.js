@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AccountForm from "./AccountForm";
 import Link from 'next/link'
+import Image from "next/image";
 // import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router'
 function Header() {
@@ -17,6 +18,10 @@ function Header() {
     }
     return <>
         <header className="header">
+        <div className="image">
+  <img src="logo.png" alt="" style={{ height: 25 }} />
+</div>
+
             <Link href="/" className="logo">
                 {" "}
                 ASOSE{" "}

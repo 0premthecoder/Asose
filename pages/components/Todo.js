@@ -15,7 +15,7 @@ export default function Todo({result}) {
     const [todo, setTodo] = useState('')
     // const [pending, setPending] = useState(true)
     const [user, setUser] = useState()
-    // const [todos, setTodos] = useState()
+    const [todoList, setTodoList] = useState()
 
     const fetchTodos = async () => {
         let fetchedTodos;
@@ -29,7 +29,7 @@ export default function Todo({result}) {
                 userEmail: dec.email,
             });
         //insert our response in the todoList state
-        //   setTodoList(fetchedTodos);
+        setTodoList(fetchedTodos);
         console.log(fetchedTodos)
 
     };
@@ -42,8 +42,6 @@ export default function Todo({result}) {
         let dec = jwt.decode(token)
         setUser(dec.email)
         fetchTodos()
-        
-
     }, [])
 
 
@@ -95,28 +93,26 @@ export default function Todo({result}) {
             },
             body: JSON.stringify(formBody),
         })
-        console.log(res)
-        fetchTodos()
+
+        await fetchTodos()
     }
 
-    const handeldelete = () => {
-        const formBody = { user: user, todo: todo }
+    const handeldelete = async (id) => {
+        const formBody = {_id: id}
         console.log(formBody)
-        let res = fetch("/api/todo", {
+        fetch("/api/todo", {
             method: 'DELETE', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formBody),
         })
-        console.log(res);
+        fetchTodos()
     }
-
     return (
         <div className={styles.wrapper}>
             <div className={styles.taskInput}>
                 <i className="fa fa-check" onClick={handeltodo} aria-hidden="true"></i>
-
                 <input type="text" name='todo' onChange={handelChange} value={todo} placeholder="Add a new task" />
             </div>
             <div className={styles.controls}>
@@ -131,15 +127,17 @@ export default function Todo({result}) {
                 }}>Clear All</button>
             </div>
             <ul className={styles.taskBox}>
-                <li className={styles.task}>
-                    <label htmlFor="${id}">
-                        <input onClick="updateStatus(this)" type="checkbox" id="${id}" />
-                        <p className="${completed}">"hhh"</p>
+                {todoList && todoList.length >= 1 ?  todoList.map((todo) =>{ 
+                    return( <li className={styles.task}>
+                    <label htmlFor={todo._id}>
+                        <input onClick="updateStatus(this)" type="checkbox" id={todo._id} />
+                        <p className="${completed}">{todo.text}</p>
                     </label>
                     <div className={styles.settings}>
-                        <i className="fa fa-times" onClick={handeltodo} aria-hidden="true"></i>
+                        <i className="fa fa-times" onClick={() => handeldelete(todo._id)} aria-hidden="true"></i>
                     </div>
-                </li>
+                </li>)}) :  "No more tasks"
+                }
             </ul>
         </div>
 

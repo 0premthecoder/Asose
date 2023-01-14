@@ -221,7 +221,8 @@ export async function getServerSideProps(context) {
     const client = createClient({
         projectId: "2paqrnsj",
         dataset: "production",
-        useCdn: true
+        useCdn: true,
+        apiVersion: "2021-04-28",
     })
 
     const query = '*[_type =="post"]'

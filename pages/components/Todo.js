@@ -3,7 +3,10 @@ import styles from '../../styles/Todo.module.css'
 import { useEffect } from 'react'
 var jwt = require('jsonwebtoken');
 
-export default function Todo() {
+import client from "../../sanity/client";
+
+
+export default function Todo({result}) {
     const convertToNextClassName = (className) => className.split(' ').map(c => styles[c]).join(' ')// change class name
     const [show, setShow] = useState('')// showing Menubar for delete and update todo
     const [active, setActive] = useState('')// showing button
@@ -14,40 +17,43 @@ export default function Todo() {
     const [user, setUser] = useState()
     // const [todos, setTodos] = useState()
 
-    useEffect( () => {
+    const fetchTodos = async () => {
+        let fetchedTodos;
+        //make sure the user is loaded
+        const token = localStorage.getItem('token')
+        let dec = jwt.decode(token)
+        //pass userEmail as a query parameter
+        fetchedTodos = await client.fetch(
+            `*[_type=="todo" && userEmail==$userEmail]`,
+            {
+                userEmail: dec.email,
+            });
+        //insert our response in the todoList state
+        //   setTodoList(fetchedTodos);
+        console.log(fetchedTodos)
+
+    };
+
+    
+
+    useEffect(() => {
         // Perform localStorage action
         const token = localStorage.getItem('token')
         let dec = jwt.decode(token)
         setUser(dec.email)
-        // const showTodo = async () =>{ 
-        //     const formBodyFetch = { user: dec.email}
-        //     console.log(formBodyFetch)
-        //     let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json',
-        //         },
-        //         body: JSON.stringify(formBodyFetch),
-    
-        //     })
-        //     console.log(res)
-        //     let data = await res.json()
-        //     console.log(data)
-        //     setTodos(data)
-        // }
-
-        // showTodo()
+        fetchTodos()
         
-      }, [])
-    
 
-    
+    }, [])
+
+
+
 
     const handelChange = (e) => {
         if (e.target.name === "todo") {
             setTodo(e.target.value);
         }
-        
+
     }
 
     // const handelSubmit= async (e)=>{
@@ -70,7 +76,7 @@ export default function Todo() {
     //                 'Content-Type': 'application/json',
     //             },
     //             body: JSON.stringify(formBodyFetch),
-    
+
     //         })
     //         // console.log(res)
     //         let data = await res.json()
@@ -78,7 +84,7 @@ export default function Todo() {
     //         setTodos(data)
     // }
 
-    const handeltodo = async (e)=>{
+    const handeltodo = async (e) => {
         e.preventDefault();
         const formBody = { user: user, text: todo }
         console.log(formBody)
@@ -90,6 +96,20 @@ export default function Todo() {
             body: JSON.stringify(formBody),
         })
         console.log(res)
+        fetchTodos()
+    }
+
+    const handeldelete = () => {
+        const formBody = { user: user, todo: todo }
+        console.log(formBody)
+        let res = fetch("/api/todo", {
+            method: 'DELETE', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formBody),
+        })
+        console.log(res);
     }
 
     return (
@@ -110,23 +130,17 @@ export default function Todo() {
                     "pointerEvents": "auto"
                 }}>Clear All</button>
             </div>
-            {/* <ul className={styles.taskBox}>
-                {todos && todos.map ((todoItem) => { 
-                    console.log(todoItem)
-                    return <li className={styles.task}>
+            <ul className={styles.taskBox}>
+                <li className={styles.task}>
                     <label htmlFor="${id}">
-                        <input onclick="updateStatus(this)" type="checkbox" id="${id}" />
-                        <p className="${completed}">{todoItem.todo}</p>
+                        <input onClick="updateStatus(this)" type="checkbox" id="${id}" />
+                        <p className="${completed}">"hhh"</p>
                     </label>
                     <div className={styles.settings}>
-                        <i className="fa fa-wrench" onClick={show === 'show' ? () => setShow('') : () => setShow('show')} aria-hidden="true"></i>
-                        <ul className={convertToNextClassName(`taskMenu`)} style={show === 'show' ? { "transform": "scale(1)" } : {}}>
-                            <li onclick='editTask(${id}, "${todo.name}")'><i className="uil uil-pen"></i>Edit</li>
-                            <li onclick='deleteTask(${id}, "${filter}")'><i className="uil uil-trash"></i>Delete</li>
-                        </ul>
+                        <i className="fa fa-times" onClick={handeltodo} aria-hidden="true"></i>
                     </div>
-                </li>})}
-            </ul> */}
+                </li>
+            </ul>
         </div>
 
     )

@@ -20,9 +20,7 @@ export default async function handler(req, res) {
                     .then((res) => {
                         console.log(`Todo was created, document ID is ${res._id}`);
                     });
-                res
-                    .status(200)
-                    .json({ msg: `Todo was created, document ID is ${res._id}` });
+                res.status(200).json({ msg: `Todo was created, document ID is ${res._id}` });
             } catch (err) {
                 console.error(err);
                 res.status(500).json({ msg: "Error, check console" });
@@ -42,12 +40,20 @@ export default async function handler(req, res) {
             break;
         case "DELETE":
             await client
-                .delete(req.body)
+                .delete(req.body._id)
                 .then((res) => {
                     res.body;
                 })
                 .then((res) => console.log(`Todo was deleted`));
             res.status(200).json({ msg: "Success" });
             break;
+        default: 
+            await client.fetch(`*[_type=="todo" && userEmail==$userEmail]`,
+            {
+                userEmail: dec.email,
+            }).then((res) =>{
+                res.body;
+            })
+            res.status(200).json({ msg: `All todo is there for you ${res}` });
     }
 }

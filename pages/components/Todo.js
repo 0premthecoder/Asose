@@ -80,7 +80,7 @@ export default function Todo() {
 
     const handeltodo = async (e)=>{
         e.preventDefault();
-        const formBody = { user: user, todo: todo }
+        const formBody = { user: user, text: todo }
         console.log(formBody)
         let res = await fetch("/api/todo", {
             method: 'POST', // or 'PUT'

@@ -10,33 +10,33 @@ export default function Todo() {
 
     // variables for todos
     const [todo, setTodo] = useState('')
-    const [pending, setPending] = useState(true)
+    // const [pending, setPending] = useState(true)
     const [user, setUser] = useState()
-    const [todos, setTodos] = useState()
+    // const [todos, setTodos] = useState()
 
     useEffect( () => {
         // Perform localStorage action
         const token = localStorage.getItem('token')
         let dec = jwt.decode(token)
         setUser(dec.email)
-        const showTodo = async () =>{ 
-            const formBodyFetch = { user: dec.email}
-            console.log(formBodyFetch)
-            let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formBodyFetch),
+        // const showTodo = async () =>{ 
+        //     const formBodyFetch = { user: dec.email}
+        //     console.log(formBodyFetch)
+        //     let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(formBodyFetch),
     
-            })
-            console.log(res)
-            let data = await res.json()
-            console.log(data)
-            setTodos(data)
-        }
+        //     })
+        //     console.log(res)
+        //     let data = await res.json()
+        //     console.log(data)
+        //     setTodos(data)
+        // }
 
-        showTodo()
+        // showTodo()
         
       }, [])
     
@@ -50,38 +50,51 @@ export default function Todo() {
         
     }
 
-    const handelSubmit= async (e)=>{
+    // const handelSubmit= async (e)=>{
+    //     e.preventDefault();
+    //     const formBody = { user: user, todo: todo }
+
+    //     await fetch(process.env.NEXT_PUBLIC_ADDTODO_API_URL, {
+    //         method: 'POST', // or 'PUT'
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(formBody),
+    //     })
+
+    //     const formBodyFetch = { user: dec.email}
+    //         console.log(formBodyFetch)
+    //         let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(formBodyFetch),
+    
+    //         })
+    //         // console.log(res)
+    //         let data = await res.json()
+    //         // console.log(data)
+    //         setTodos(data)
+    // }
+
+    const handeltodo = async ()=>{
         e.preventDefault();
         const formBody = { user: user, todo: todo }
 
-        await fetch(process.env.NEXT_PUBLIC_ADDTODO_API_URL, {
+        await fetch("/api/todo", {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formBody),
         })
-
-        const formBodyFetch = { user: dec.email}
-            console.log(formBodyFetch)
-            let res = await fetch(process.env.NEXT_PUBLIC_FETCHTODO_API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formBodyFetch),
-    
-            })
-            // console.log(res)
-            let data = await res.json()
-            // console.log(data)
-            setTodos(data)
     }
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.taskInput}>
-                <i className="fa fa-check" onClick={handelSubmit} aria-hidden="true"></i>
+                <i className="fa fa-check" onClick={handeltodo} aria-hidden="true"></i>
 
                 <input type="text" name='todo' onChange={handelChange} value={todo} placeholder="Add a new task" />
             </div>
@@ -96,7 +109,7 @@ export default function Todo() {
                     "pointerEvents": "auto"
                 }}>Clear All</button>
             </div>
-            <ul className={styles.taskBox}>
+            {/* <ul className={styles.taskBox}>
                 {todos && todos.map ((todoItem) => { 
                     console.log(todoItem)
                     return <li className={styles.task}>
@@ -112,7 +125,7 @@ export default function Todo() {
                         </ul>
                     </div>
                 </li>})}
-            </ul>
+            </ul> */}
         </div>
 
     )

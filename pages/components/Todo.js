@@ -78,7 +78,7 @@ export default function Todo() {
     //         setTodos(data)
     // }
 
-    const handeltodo = async ()=>{
+    const handeltodo = async (e)=>{
         e.preventDefault();
         const formBody = { user: user, todo: todo }
 

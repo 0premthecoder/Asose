@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 var jwt = require('jsonwebtoken');
 
 import client from "../../sanity/client";
+import TodoItem from './TodoItem';
 
 
 export default function Todo({result}) {
@@ -13,7 +14,6 @@ export default function Todo({result}) {
 
     // variables for todos
     const [todo, setTodo] = useState('')
-    // const [pending, setPending] = useState(true)
     const [user, setUser] = useState()
     const [todoList, setTodoList] = useState()
 
@@ -30,8 +30,6 @@ export default function Todo({result}) {
             });
         //insert our response in the todoList state
         setTodoList(fetchedTodos);
-        console.log(fetchedTodos)
-
     };
 
     
@@ -47,7 +45,7 @@ export default function Todo({result}) {
 
 
 
-    const handelChange = (e) => {
+    const handleChange = (e) => {
         if (e.target.name === "todo") {
             setTodo(e.target.value);
         }
@@ -82,7 +80,7 @@ export default function Todo({result}) {
     //         setTodos(data)
     // }
 
-    const handeltodo = async (e) => {
+    const handleTodo = async (e) => {
         e.preventDefault();
         const formBody = { user: user, text: todo }
         console.log(formBody)
@@ -94,49 +92,50 @@ export default function Todo({result}) {
             body: JSON.stringify(formBody),
         })
 
-        await fetchTodos()
+        fetchTodos()
     }
 
-    const handeldelete = async (id) => {
-        const formBody = {_id: id}
+    const handleDelete = async (todo) => {
+        const formBody = {_id: todo._id}
         console.log(formBody)
-        fetch("/api/todo", {
+        let res = await fetch("/api/todo", {
             method: 'DELETE', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formBody),
         })
+        
+        fetchTodos()
+    }
+
+    const handleUpdate = async (todo) => {
+        let iscomplete = true
+        const formBody = {id: todo._id, iscomplete: iscomplete}
+        let res = await fetch("/api/todo", {
+            method: 'PUT', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formBody),
+        })
+        
         fetchTodos()
     }
     return (
         <div className={styles.wrapper}>
             <div className={styles.taskInput}>
-                <i className="fa fa-check" onClick={handeltodo} aria-hidden="true"></i>
-                <input type="text" name='todo' onChange={handelChange} value={todo} placeholder="Add a new task" />
+                <i className="fa fa-check" onClick={handleTodo} aria-hidden="true"></i>
+                <input type="text" name='todo' onChange={handleChange} value={todo} placeholder="Add a new task" />
             </div>
             <div className={styles.controls}>
                 <div className={styles.filters}>
                     <span className={styles.active} id="all">All</span>
-                    <span id="pending">Pending</span>
-                    <span id="completed">Completed</span>
                 </div>
-                <button className={styles.clearBtn} style={{
-                    "opacity": "0.9",
-                    "pointerEvents": "auto"
-                }}>Clear All</button>
             </div>
             <ul className={styles.taskBox}>
-                {todoList && todoList.length >= 1 ?  todoList.map((todo) =>{ 
-                    return( <li className={styles.task}>
-                    <label htmlFor={todo._id}>
-                        <input onClick="updateStatus(this)" type="checkbox" id={todo._id} />
-                        <p className="${completed}">{todo.text}</p>
-                    </label>
-                    <div className={styles.settings}>
-                        <i className="fa fa-times" onClick={() => handeldelete(todo._id)} aria-hidden="true"></i>
-                    </div>
-                </li>)}) :  "No more tasks"
+                {todoList && todoList.map((todo) =>{ 
+                    return( <TodoItem todo={todo} handleUpdate={handleUpdate} key={todo._id} handleDelete={handleDelete}/>)})
                 }
             </ul>
         </div>

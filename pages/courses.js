@@ -25,9 +25,9 @@ function courses() {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
                 odit!
               </p>
-              <a href="coding.html" className="btn">
+              <Link href="/blog/coding" className="btn">
                 read more
-              </a>
+              </Link>
               <div className="icons">
                 <span>
                   {" "}
@@ -47,9 +47,9 @@ function courses() {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
                 odit!
               </p>
-              <a href="emp.html" className="btn">
+              <Link href="/blog/electro-mechanical-production" className="btn">
                 read more
-              </a>
+              </Link>
               <div className="icons">
                 <span>
                   {" "}
@@ -69,9 +69,9 @@ function courses() {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
                 odit!
               </p>
-              <a href="Finance.html" className="btn">
+              <Link href="/blog/finance" className="btn">
                 read more
-              </a>
+              </Link>
               <div className="icons">
                 <span>
                   {" "}
@@ -91,9 +91,9 @@ function courses() {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
                 odit!
               </p>
-              <a href="dmd.html" className="btn">
+              <Link href="/blog/digital-media-and-designing" className="btn">
                 read more
-              </a>
+              </Link>
               <div className="icons">
                 <span>
                   {" "}
@@ -113,9 +113,9 @@ function courses() {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
                 odit!
               </p>
-              <a href="fashion.html" className="btn">
+              <Link href='/blog/fashion' className="btn">
                 read more
-              </a>
+              </Link>
               <div className="icons">
                 <span>
                   {" "}
@@ -135,9 +135,9 @@ function courses() {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
                 odit!
               </p>
-              <a href="robotics.html" className="btn">
+              <Link href="/blog/robotics" className="btn">
                 read more
-              </a>
+              </Link>
               <div className="icons">
                 <span>
                   {" "}

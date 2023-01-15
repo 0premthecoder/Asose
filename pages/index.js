@@ -134,9 +134,9 @@ function Index({result}) {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="robotics.html" className={styles.btn}>
+                                <Link href="/blog/robotics" className={styles.btn}>
                                     read more
-                                </a>
+                                </Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
@@ -150,9 +150,9 @@ function Index({result}) {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="fashion.html" className={styles.btn}>
+                                <Link href="/blog/fashion" className={styles.btn}>
                                     read more
-                                </a>
+                                </Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
@@ -166,9 +166,9 @@ function Index({result}) {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="dmd.html" className={styles.btn}>
+                                <Link href="blog/digital-media-and-designing" className={styles.btn}>
                                     read more
-                                </a>
+                                </Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
@@ -182,9 +182,9 @@ function Index({result}) {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="Finance.html" className={styles.btn}>
+                                <Link href="/blog/finance" className={styles.btn}>
                                     read more
-                                </a>
+                                </Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
@@ -198,9 +198,9 @@ function Index({result}) {
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
                                     ratione?
                                 </p>
-                                <a href="emp.html" className={styles.btn}>
+                                <Link href="/blog/electro-mechanical-production" className={styles.btn}>
                                     read more
-                                </a>
+                                </Link>
                             </div>
                         </SwiperSlide>
                     </div>

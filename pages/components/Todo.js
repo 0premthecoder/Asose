@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
 import styles from '../../styles/Todo.module.css'
 import { useEffect } from 'react'
-var jwt = require('jsonwebtoken');
 
 import client from "../../sanity/client";
 import TodoItem from './TodoItem';
+import { authorization } from '../../firebase/clientapp';
 
 
-export default function Todo({result}) {
-    const convertToNextClassName = (className) => className.split(' ').map(c => styles[c]).join(' ')// change class name
-    const [show, setShow] = useState('')// showing Menubar for delete and update todo
-    const [active, setActive] = useState('')// showing button
-
+export default function Todo() {
     // variables for todos
     const [todo, setTodo] = useState('')
     const [user, setUser] = useState()
@@ -20,25 +16,23 @@ export default function Todo({result}) {
     const fetchTodos = async () => {
         let fetchedTodos;
         //make sure the user is loaded
-        const token = localStorage.getItem('token')
-        let dec = jwt.decode(token)
         //pass userEmail as a query parameter
+        const userName = authorization.currentUser.email;
         fetchedTodos = await client.fetch(
             `*[_type=="todo" && userEmail==$userEmail]`,
             {
-                userEmail: dec.email,
+                userEmail: userName,
             });
         //insert our response in the todoList state
         setTodoList(fetchedTodos);
     };
 
-    
+   
 
     useEffect(() => {
         // Perform localStorage action
-        const token = localStorage.getItem('token')
-        let dec = jwt.decode(token)
-        setUser(dec.email)
+        const userName = authorization.currentUser.email;
+        setUser(userName)
         fetchTodos()
     }, [])
 

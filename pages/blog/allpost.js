@@ -1,7 +1,7 @@
 import styles from '../../styles/Dashboard.module.css'
 import Link from "next/link.js";
 import React, { useEffect, useState } from "react";
-import sanityClient from "../client.js";
+import sanityClient from "../../sanity/blogclient";
 import Footer from "../components/Footer.js";
 import Header from "../components/Header.js";
 

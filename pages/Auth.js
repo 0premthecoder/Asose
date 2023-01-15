@@ -1,12 +1,9 @@
 // auth.tsx
 import React from "react";
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { authorization } from "../firebase/clientapp";
-import { getAuth, signInWithPopup, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
-
-
-
-function auth() {
+import {signInWithPopup, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import styles from '../styles/Home.module.css'
+function Auth() {
     const signInwithGithub = () => {
         const provider = new GithubAuthProvider();
         signInWithPopup(authorization, provider)
@@ -26,9 +23,11 @@ function auth() {
             })
     }
 
-    return (<><div><button onClick={signInwithGithub}>Click me for github</button></div>
-    <button onClick={signInwithGoogle}>Click me for google</button></>
+    return (<><div>
+        <button className={styles.btndark} onClick={signInwithGithub}>Github Login</button></div>
+    <button onClick={signInwithGoogle} className={styles.btn}>Google Login</button>
+    </>
     );
 }
 
-export default auth;
+export default Auth;

@@ -9,3 +9,14 @@
   cursor: pointer;
   text-transform: capitalize;
 }
+.btndark {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #ffffff;
+  background: #000000;
+  color: #0eb582;
+  cursor: pointer;
+  text-transform: capitalize;
+}

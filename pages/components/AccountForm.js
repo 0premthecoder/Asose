@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/router'
+import Auth from "../Auth";
+
 
 export default function AccountForm(props) {
     const [name, setName] = useState('');
@@ -101,36 +103,14 @@ export default function AccountForm(props) {
                 <span className={`btn ${active ? 'active' : ' '} login-btn`} onClick={() => setActive(true)}>login</span>
                 <span className={`btn ${active ? ' ' : 'active'} register-btn`} onClick={() => setActive(false)}>register</span>
             </div>
-            <form className={`login-form ${active ? 'active' : ' '}`} onSubmit={handelSubmitLogin} method='POST'>
+            <form className={`login-form ${active ? 'active' : ' '}`} method='POST'>
                 <h3>login now</h3>
-                <input type="email" name="email" value={email} onChange={handelChange} placeholder="Enter your email" className="box" />
-                <input
-                    type="password"
-                    placeholder="Enter your password"
-                    className="box" 
-                    name="password" value={password}
-                    onChange={handelChange}
-                    />
-                {/* <div className="flex"> */}
-                    {/* <input type="checkbox" name="" id="remember-me" /> */}
-                    {/* <label htmlFor="remember-me">remember me</label> */}
-                    {/* <a href="#">forgot password?</a> */}
-                {/* </div> */}
-                <input type="submit" defaultValue="login now" className="btn" />
+               <Auth/>
             </form>
 
-            <form className={`register-form ${active ? ' ' : 'active'}`} onSubmit={handelSubmitSignup} method='POST'>
+            <form className={`register-form ${active ? ' ' : 'active'}`} method='POST'>
                 <h3>register now</h3>
-                <input type="Name" name="name" value={name} onChange={handelChange} placeholder="Enter your name" className="box" typeof="string"/>
-                <input type="Email" name="email" value={email} onChange={handelChange} placeholder="Enter your email" className="box" typeof="email"/>
-                <input
-                    type="Password"
-                    placeholder="Enter your password"
-                    className="box"
-                    name="password"
-                    value={password} onChange={handelChange} typeof="string"
-                />
-                <input type="submit" defaultValue="register now" className="btn" />
+                <Auth/>
             </form>
         </div></>)
 }

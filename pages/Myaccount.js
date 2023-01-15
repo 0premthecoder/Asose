@@ -89,7 +89,7 @@ function Myaccount() {
 
       <DashboardHeader />
       <div className={styles.main}>
-        <img id='logo' src={picture} alt="logo" className={styles.homeImage} width={300} height={200} />
+        <img id='logo' src={picture} alt="logo" className={styles.homeImage} />
         <h1>
           &lt;Welcome&#47;&gt;
         </h1>

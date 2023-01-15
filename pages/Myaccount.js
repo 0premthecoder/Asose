@@ -10,6 +10,7 @@ import Todo from './components/Todo';
 import { signOut } from 'firebase/auth';
 import { authorization } from '../firebase/clientapp';
 import Router from "next/router";
+import Footer from './components/Footer';
 
 
 function Myaccount() {
@@ -105,14 +106,15 @@ function Myaccount() {
         {active === 'a' ? <h3>Under Devlopment</h3> : ''}
       </div>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a
           target="_blank"
           rel="noopener noreferrer"
         >
           Created by &#9998;&nbsp;<span style={{ fontWeight: 'bolder' }}>Coding Team</span>
         </a>
-      </footer>
+      </footer> */}
+      <Footer/>
     </>
   )
 }

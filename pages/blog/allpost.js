@@ -28,17 +28,19 @@ export default function AllPosts() {
 
   return (<>
     <Header/>
-    <div className={styles.main}>
-      <h3>Welcome to my blog posts page!</h3>
-      <div className={styles.grid}>
+    <section class="heading-link">
+                <h3>Blogs</h3>
+                <p> <Link href="/">home</Link> / Blogs </p>
+            </section>
+    <div className={styles.main2} >
+      {/* <h1>Welcome To Asose BlogPosts</h1> */}
+      <div className={styles.grid}style={{marginTop:"5px"}}>
         {allPostsData &&
           allPostsData.map((post, index) => (
             <Link href={"/blog/" + post.slug.current} key={post.slug.current}  className={styles.card}>
               <div key={index}>
-                <img src={post.mainImage.asset.url} alt="" width={30} />
-                <span>
-                  <h2>{post.title}</h2>
-                </span>
+                <img src={post.mainImage.asset.url} alt="" width={100} />
+                    <h3>{post.title}</h3>
               </div>
             </Link>
           ))}

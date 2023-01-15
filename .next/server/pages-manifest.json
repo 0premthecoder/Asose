@@ -2,5 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/about": "pages/about.js"
+=======
+  "/blog/allpost": "pages/blog/allpost.js",
+  "/blog/[slug]": "pages/blog/[slug].js"
+>>>>>>> 5869d0af119562d2aaae74de08362137749d87e4
 }

@@ -5,7 +5,7 @@ export default function Overview() {
   return (
      <div className={styles.grid}>
           <div className={styles.card}>
-              <h3 >Your Todos</h3>
+              <h3>Your Todos</h3>
               <p>Find in-depth information about it.</p>
             </div>
             <div className={styles.card}>

@@ -4,11 +4,6 @@ import styles from '../../styles/Dashboard.module.css'
 import { useRouter } from 'next/router'
 
 export default function DashboardHeader() {
-    const router = useRouter()
-    const logout = () => {
-        localStorage.removeItem('token')
-        router.push('/')
-    }
     const [navactive, setNavactive] = useState('')
     return (<>
         {/* <nav className={styles.mainnav}>
@@ -28,9 +23,9 @@ export default function DashboardHeader() {
             </Link>
             <nav className={`navbar ${navactive}`} >
                 <div id="close-navbar" className="fas fa-times" onClick={() => setNavactive('')} />
-                <Link href='/'><i className="fa fa-user-secret" aria-hidden="true"></i></Link>
-                <Link href="/Myaccount"><i className="fa fa-book" aria-hidden="true"></i></Link>
-                <Link href="/"><i className="fa fa-user-times" aria-hidden="true" onClick={()=> logout()}></i></Link>
+                <Link href='/Myaccount'><i className="fa fa-user-secret" aria-hidden="true"></i></Link>
+                <Link href="/blog/allpost"><i className="fa fa-book" aria-hidden="true"></i></Link>
+                <Link href="/"><i className="fa fa-user-times" aria-hidden="true"></i></Link>
                 {/* <Link href="/contact">Contact</Link> */}
             </nav>
             <div className="icons">

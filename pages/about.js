@@ -4,6 +4,7 @@ import "swiper/css/bundle";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Footer from "./components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 function About() {
     return (
         <>
@@ -12,43 +13,108 @@ function About() {
                 <h3>about us</h3>
                 <p> <Link href="/">home</Link> / about </p>
             </section>
-
-            <section className="about" >
-
-                <div className="image">
-                    <img src="/about-img.jpg" alt="" />
-                </div>
-
-                <div className="content">
-                    <h3 className="about-title">we have best skill courses for you</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam hic magnam fugit exercitationem neque, quae laboriosam natus. Ut maxime assumenda facere ea quasi accusamus dolores delectus tempora animi, expedita iste.</p>
-                    <div className="icons-container">
-                        <div className="icons">
-                            <img src="/about-icon-1.png" alt="" />
-                            <h3>6+</h3>
-                            <span>skill courses</span>
-                        </div>
-                        <div className="icons">
-                            <img src="/about-icon-2.png" alt="" />
-                            <h3>300+</h3>
-                            <span>students</span>
-                        </div>
-                        <div className="icons">
-                            <img src="/about-icon-3.png" alt="" />
-                            <h3>10+</h3>
-                            <span>awards</span>
-                        </div>
+            <section className="subjects">
+                <h1 className="heading">our popular subjects</h1>
+                <div className="box-container">
+                    <div className="box">
+                    <Link href={'/blog/digital-media-and-designing'}>
+                    <Image
+                            src="/dmd.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                    </Link>
+                        
+                         <Link href={'/blog/digital-media-and-designing'}>
+                         <h3>Digital Media &amp; Design</h3>
+                         </Link>
+                        
+                    </div>
+                    <div className="box">
+                    <Link href={'/blog/finance'}>
+                    <Image
+                            src="/finance.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                    </Link>
+                    <Link href={'/blog/finance'}>
+                    <h3>Finance &amp; Accounting</h3>
+                    </Link>
+                       
+                    </div>
+                    <div className="box">
+                        <Link href={'/blog/electro-mechanical-production'}>
+                            <Image
+                            src="/emp.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                        </Link>
+                        
+                         <Link href={'/blog/electro-mechanical-production'}>
+                            <h3>Electro Mechanical &amp; Production</h3>
+                            </Link>
+                        
+                    </div>
+                    <div className="box">
+                    <Link href={'/blog/coding'}>
+                    <Image
+                            src="/Coding logo.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                    </Link>
+                    <Link href={'/blog/coding'}>
+                    <h3>Coding</h3>
+                    </Link>
+                       
+                       
+                    </div>
+                    <div className="box">
+                    <Link href={'/blog/fashion'}>
+                    <Image
+                            src="/fashion.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                    </Link>
+                        
+                         <Link href={'/blog/fashion'}>
+                         <h3>Fashion Designing</h3>
+                         </Link>
+                        
+                    </div>
+                    <div className="box">
+                    <Link href={'/blog/robotics'}>
+                    <Image
+                            src="/robo.png"
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                        />
+                    </Link>
+                    <Link href={'/blog/robotics'}>
+                    <h3>Robotics</h3>
+                    </Link>
+                        
                     </div>
                 </div>
-
             </section>
+
+           
             {/* about section ends */}
 
             {/* teachers section starts  */}
 
             <section className="teachers">
 
-                <h1 className="heading">Expert facilitators</h1>
+                <h1 className="heading">Expert Coders</h1>
 
                 <Swiper className="swiper teachers-slider" loop={true} grabCursor={true} spaceBetween={20} breakpoints={{
                     0: {
@@ -76,8 +142,8 @@ function About() {
                                 </div>
                             </div>
                             <div className="content">
-                                <h3>Teacher</h3>
-                                <span>expert coder</span>
+                                <h3>Name </h3>
+                                <span>Backend Developer</span>
                             </div>
                         </SwiperSlide>
 
@@ -92,8 +158,8 @@ function About() {
                                 </div>
                             </div>
                             <div className="content">
-                                <h3>H.R Sharma</h3>
-                                <span>HOS of School</span>
+                                <h3>Name </h3>
+                                <span>Fontend Developer</span>
                             </div>
                         </SwiperSlide>
 
@@ -157,7 +223,7 @@ function About() {
 
                         <SwiperSlide className="swiper-slide slide">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim animi atque numquam harum libero nemo, eligendi laboriosam beatae quo iure corrupti, neque rerum possimus non nisi quia! Cumque, tempora sit.</p>
-                            <img src="/pic-3.png" alt="" />
+                            <img src="/2.jpg" alt="" />
                             <h3>Student 2</h3>
                             <div className="stars">
                                 <i className="fas fa-star"></i>

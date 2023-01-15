@@ -76,6 +76,7 @@ a {
 a:-webkit-any-link {
   text-decoration: none;
   color: inherit;
+  --bs-link-hover-color: #0eb582;
 }
 
  .heading-link {

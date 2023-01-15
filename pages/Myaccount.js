@@ -17,8 +17,8 @@ function Myaccount() {
     const token = localStorage.getItem('token')
     let dec = jwt.decode(token)
     
-    setName(dec.name)
-    toast.success('🦄 User Logined Successfully!', {
+   
+    toast.success('🥳 User Logined Successfully!', {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,

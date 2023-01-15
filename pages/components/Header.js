@@ -27,6 +27,7 @@ function Header() {
                 <Link href="/about">About</Link>
                 <Link href="/courses">Courses</Link>
                 <Link href="/contact">Contact</Link>
+                <Link href="/blog/allpost">Blogs</Link>
             </nav>
             <div className="icons">
                 <div id="account-btn" onClick={() => togglepage(true)} className="fas fa-user" />

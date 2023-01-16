@@ -11,14 +11,12 @@ import Link from 'next/link';
 
 // Images
 
-function Index({result}) {
+function Index() {
     const [showForm, SetshowForm] = useState(false);
     const passData = bool => {
         SetshowForm(bool);
         console.log(showForm)
     };
-
-    console.log(result);
 
     return (
         // <React.Fragment>
@@ -155,21 +153,4 @@ function Index({result}) {
 export default Index
 
 
-export async function getServerSideProps(context) {
-    const client = createClient({
-        projectId: "2paqrnsj",
-        dataset: "production",
-        useCdn: true,
-        apiVersion: "2021-04-28",
-    })
-
-    const query = '*[_type =="post"]'
-    const result = await client.fetch(query)
-
-    return {
-        props: {
-            result
-        }
-    }
-}
 

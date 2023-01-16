@@ -22,10 +22,10 @@ function Auth() {
         await signInWithPopup(authorization, provider)
             .then((response) => {
                 console.log(response);
+                Router.push('/Myaccount')
             }).catch((error) => {
                 console.log(error);
             })
-            Router.push('/Myaccount')
     }
 
     return (<>

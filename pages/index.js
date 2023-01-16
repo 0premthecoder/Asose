@@ -66,6 +66,36 @@ function Index({result}) {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
+                                <img src="/emp2.png" alt="" />
+                                <h3>Electro Mechanical &amp;Production</h3>
+                            </div>
+                            <div className="content">
+                                <h3>Electro Mechanical &amp; Production</h3>
+                                <p>
+                                The process of creating products using electrical and mechanical components to assemble parts, materials, and systems...
+                                </p>
+                                <Link href="/blog/electro-mechanical-production" className={styles.btn}>
+                                    read more
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
+                            <div className="image">
+                                <img src="/finance.png" alt="" />
+                                <h3>Finance &amp; Accounting</h3>
+                            </div>
+                            <div className="content">
+                                <h3>Finance &amp; Accounting</h3>
+                                <p>
+                                Finance and accounting involve the management of money and resources through budgeting, forecasting, and analyzing financial data...
+                                </p>
+                                <Link href="/blog/finance" className={styles.btn}>
+                                    read more
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
+                            <div className="image">
                                 <img src="/robotics.png" alt="" />
                                 <h3>Robotics</h3>
                             </div>
@@ -109,36 +139,8 @@ function Index({result}) {
                                 </Link>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide className="swiper-slide slide">
-                            <div className="image">
-                                <img src="/finance.png" alt="" />
-                                <h3>Finance &amp; Accounting</h3>
-                            </div>
-                            <div className="content">
-                                <h3>Finance &amp; Accounting</h3>
-                                <p>
-                                Finance and accounting involve the management of money and resources through budgeting, forecasting, and analyzing financial data...
-                                </p>
-                                <Link href="/blog/finance" className={styles.btn}>
-                                    read more
-                                </Link>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide className="swiper-slide slide">
-                            <div className="image">
-                                <img src="/emp2.png" alt="" />
-                                <h3>Electro Mechanical &amp;Production</h3>
-                            </div>
-                            <div className="content">
-                                <h3>Electro Mechanical &amp; Production</h3>
-                                <p>
-                                The process of creating products using electrical and mechanical components to assemble parts, materials, and systems...
-                                </p>
-                                <Link href="/blog/electro-mechanical-production" className={styles.btn}>
-                                    read more
-                                </Link>
-                            </div>
-                        </SwiperSlide>
+                        
+                        
                     </div>
                 </Swiper>
             </section>

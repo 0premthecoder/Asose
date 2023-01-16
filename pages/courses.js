@@ -22,8 +22,7 @@ function courses() {
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
-                odit!
+              Coding is the process of using a programming language to create software applications, websites, and other types of computer programs...
               </p>
               <Link href="/blog/coding" className="btn">
                 read more
@@ -44,8 +43,7 @@ function courses() {
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
-                odit!
+              This process typically involves the use of automated machines, robotic systems, and other computer-controlled equipment to produce goods in an efficient and cost-effective manner...
               </p>
               <Link href="/blog/electro-mechanical-production" className="btn">
                 read more
@@ -66,8 +64,7 @@ function courses() {
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
-                odit!
+              Finance is the broader of the two disciplines, and it involves strategies and activities related to managing money, such as investments, budgeting, and forecasting...
               </p>
               <Link href="/blog/finance" className="btn">
                 read more
@@ -88,8 +85,7 @@ function courses() {
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
-                odit!
+              It is the process of using digital tools to create visually engaging, interactive, and user-friendly experiences that are tailored to a specific audience...
               </p>
               <Link href="/blog/digital-media-and-designing" className="btn">
                 read more
@@ -110,8 +106,7 @@ function courses() {
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
-                odit!
+              Art of creating garments and accessories that are aesthetically pleasing and comfortable to wear. It use of fabrics, colours, patterns, and silhouettes to create a unique look...
               </p>
               <Link href='/blog/fashion' className="btn">
                 read more
@@ -132,8 +127,7 @@ function courses() {
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
-                odit!
+              Robotics is the branch of engineering that deals with the design, construction, operation, and use of robots. Robots are machines that can be programmed...
               </p>
               <Link href="/blog/robotics" className="btn">
                 read more

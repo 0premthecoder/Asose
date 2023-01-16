@@ -4,7 +4,7 @@ import { createClient } from "next-sanity";
 import Header from '../components/Header';
 import Link from 'next/link';
 import Footer from '../components/Footer';
-
+import styles from '../../styles/Blog.module.css'
 function post({ blog }) {
     console.log(blog)
     return (
@@ -15,26 +15,27 @@ function post({ blog }) {
                 <p> <Link href="/">blogs</Link> / {blog.title} </p>
             </section>
 
-            <section className="about" >
+            <section>
 
 
-                <img src={blog.imageUrl} alt="blogImage" />
+                <img src={blog.imageUrl} className={styles.image}  alt="blogImage" />
 
 
-                <div className="content">
-                    <h3 className="about-title">{blog.title}</h3>
+                <div>
+                    <h2>{blog.title}</h2>
                     <PortableText
                         // Pass in block content straight from Sanity.io
                         content={blog.content}
                         projectId="2paqrnsj"
                         dataset="production"
+                        
                         // Optionally override marks, decorators, blocks, etc. in a flat
                         // structure without doing any gymnastics
                         serializers={{
                             h1: (props) => <h1 style={{ color: "red" }} {...props} />,
                             li: ({ children }) => <li className="special-list-item">{children}</li>,
                         }}
-                    />
+                />
                 </div>
 
             </section>

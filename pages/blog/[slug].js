@@ -4,7 +4,6 @@ import { createClient } from "next-sanity";
 import Header from '../components/Header';
 import Link from 'next/link';
 import Footer from '../components/Footer';
-import styles from '../../styles/Blog.module.css'
 function post({ blog }) {
     console.log(blog)
     return (
@@ -15,12 +14,8 @@ function post({ blog }) {
                 <p> <Link href="/">blogs</Link> / {blog.title} </p>
             </section>
 
-            <section>
-
-
-                <img src={blog.imageUrl} className={styles.image}  alt="blogImage" />
-
-
+            <section className='blogContent'>
+                <img src={blog.imageUrl}  alt="blogImage" />
                 <div>
                     <h2>{blog.title}</h2>
                     <PortableText

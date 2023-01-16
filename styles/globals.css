@@ -1013,6 +1013,11 @@ a:-webkit-any-link {
  .footer .credit span {
    color: #0eb582;
  }
+
+ .blogContent img{
+  width: 70%;
+  height: 70%;
+ }
  
  @media (max-width: 1200px) {
    .header {
@@ -1036,6 +1041,10 @@ a:-webkit-any-link {
  }
  
  @media (max-width: 768px) {
+
+  .blogContent img{
+    width: 50%;
+   }
    .header #menu-btn {
      display: inline-block;
    }

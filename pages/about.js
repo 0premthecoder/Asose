@@ -14,7 +14,7 @@ function About() {
                 <p> <Link href="/">home</Link> / about </p>
             </section>
             <section className="subjects">
-                <h1 className="heading">our popular subjects</h1>
+                <h1 className="heading">We Have Best Skill Courses For You</h1>
                 <div className="box-container">
                     <div className="box">
                     <Link href={'/blog/digital-media-and-designing'}>

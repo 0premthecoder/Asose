@@ -3,10 +3,10 @@ import Header from "./components/Header";
 import HomeHeader from "./components/HomeHeader";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css/bundle";
-import Image from 'next/image'
+// import Image from 'next/image'
 import Footer from './components/Footer';
 import styles from './../styles/Home.module.css'
-import { createClient } from "next-sanity";
+// import { createClient } from "next-sanity";
 import Link from 'next/link';
 
 // Images

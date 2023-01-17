@@ -1018,6 +1018,14 @@ a:-webkit-any-link {
   width: 70%;
   height: 70%;
  }
+
+ .blogContent p{
+  font-size:  4rem;
+ }
+
+ .blogContent h1{
+  font-size: 6rem;
+ }
  
  @media (max-width: 1200px) {
    .header {
@@ -1044,6 +1052,9 @@ a:-webkit-any-link {
 
   .blogContent img{
     width: 50%;
+   }
+   .blogContent p{
+    font-size:  4rem;
    }
    .header #menu-btn {
      display: inline-block;

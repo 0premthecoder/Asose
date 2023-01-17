@@ -28,7 +28,7 @@ export default function AllPosts() {
 
   return (<>
     <Header/>
-    <section class="heading-link">
+    <section className="heading-link">
                 <h3>Blogs</h3>
                 <p> <Link href="/">home</Link> / Blogs </p>
             </section>

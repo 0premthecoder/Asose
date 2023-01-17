@@ -11,13 +11,13 @@ function post({ blog }) {
             <Header />
             <section class="heading-link">
                 <h3>{blog.title}</h3>
-                <p> <Link href="/">blogs</Link> / {blog.title} </p>
+                <p> <Link href="/">Blogs</Link> / {blog.title} </p>
             </section>
 
             <section className='blogContent'>
                 <img src={blog.imageUrl}  alt="blogImage" />
                 <div>
-                    <h2>{blog.title}</h2>
+                    <h1>{blog.title}</h1>
                     <PortableText
                         // Pass in block content straight from Sanity.io
                         content={blog.content}

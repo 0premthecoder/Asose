@@ -9,7 +9,7 @@ function courses() {
       <Header />
       <section className="heading-link">
                 <h3>Courses</h3>
-                <p> <Link href="/">home</Link> / courses </p>
+                <p> <Link href="/">Home</Link> / courses </p>
             </section>
       <section className="courses">
         <h1 className="heading"> Our Skill Courses </h1>

@@ -32,7 +32,9 @@ function Index() {
             {/* home courses slider section starts  */}
             <section className="home-courses .home-courses-slider" >
                 <h1 className="heading"> Our Popular Skills </h1>
-                <Swiper className="swiper home-courses-slider" loop={true} grabCursor={true} spaceBetween={20} breakpoints={{
+                <Swiper className="swiper home-courses-slider" pagination={{
+                    clickable: true,
+                }} modules={[Pagination]} loop={true} grabCursor={true} spaceBetween={20} breakpoints={{
                     0: {
                         slidesPerView: 1,
                     },

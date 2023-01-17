@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import styles from './../styles/Home.module.css'
 // import { createClient } from "next-sanity";
 import Link from 'next/link';
+import { Pagination } from "swiper";
 
 // Images
 
@@ -35,7 +36,9 @@ function Index() {
             {/* home courses slider section starts  */}
             <section className="home-courses .home-courses-slider" >
                 <h1 className="heading"> Our Popular Skills </h1>
-                <Swiper className="swiper home-courses-slider" loop={true} grabCursor={true} spaceBetween={20} breakpoints={{
+                <Swiper className="swiper home-courses-slider" pagination={{
+                    clickable: true,
+                }} modules={[Pagination]} loop={true} grabCursor={true} spaceBetween={20} breakpoints={{
                     0: {
                         slidesPerView: 1,
                     },

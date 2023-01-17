@@ -84,7 +84,7 @@ function About() {
                             width={100}
                             height={100}
                         />
-                    </Link>
+                    </Link>   
                         
                          <Link href={'/blog/fashion'}>
                          <h3>Fashion Designing</h3>

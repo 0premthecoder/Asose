@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AccountForm from "./AccountForm";
 import Link from 'next/link'
-import image from 'next/image'
 // import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/router'
 function Header() {

@@ -3,6 +3,10 @@ import React from "react";
 import { authorization } from "../firebase/clientapp";
 import {signInWithPopup, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import styles from '../styles/Home.module.css'
+import GoogleButton from 'react-google-button'
+import GithubButton from 'react-github-login-button'
+
+
 import Router from "next/router";
 function Auth() {
     const signInwithGithub = async (e) => {
@@ -29,8 +33,9 @@ function Auth() {
     }
 
     return (<>
-        <div className={styles.marg} ><button className={styles.button86} onClick={signInwithGithub}>Github Login</button></div>
-        <div><button className={styles.button86} onClick={signInwithGoogle}>Google Login</button></div>
+        <div ><GoogleButton style={{width:"211px"}} onClick={signInwithGoogle}/>
+        <GithubButton style={{marginTop: "14px", width:"211px"}} onClick={signInwithGithub}/></div>
+
     </>
     );
 }

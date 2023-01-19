@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Footer from "./components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { Pagination } from "swiper";
 function About() {
     return (
         <>
@@ -83,7 +84,7 @@ function About() {
                             width={100}
                             height={100}
                         />
-                    </Link>
+                    </Link>   
                         
                          <Link href={'/blog/fashion'}>
                          <h3>Fashion Designing</h3>
@@ -116,7 +117,9 @@ function About() {
 
                 <h1 className="heading">Expert Coders</h1>
 
-                <Swiper className="swiper teachers-slider" loop={true} grabCursor={true} spaceBetween={20} breakpoints={{
+                <Swiper className="swiper teachers-slider"  pagination={{
+                    clickable: true,
+                }} modules={[Pagination]} loop={true} grabCursor={true} spaceBetween={20} breakpoints={{
                     0: {
                         slidesPerView: 1,
                     },

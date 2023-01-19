@@ -5,6 +5,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+.swiper-pagination-bullet-active {
+     background-color: #000 !important;
 
 a {
   color: inherit;
@@ -43,6 +45,9 @@ a {
    -webkit-transition: all .2s linear;
    transition: all .2s linear;
  }
+ .swiper-pagination-bullet-active {
+  background-color: #0eb582 !important;
+}
  
  img {
    -webkit-user-select: none;

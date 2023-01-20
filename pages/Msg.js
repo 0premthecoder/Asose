@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { getToken } from "firebase/messaging";
-import messaging from '../firebase/clientapp'
+import { notification } from '../firebase/clientapp'
 export default function Msg() {
-    const fcmtoken = getToken(messaging, {vapidKey: "BKMVkPQZtjekLsw0bevQlnoTgPPYVl1xArB44BN6HO3wZxa7GEKeoOA1ybxEJoGwiyE7bVNvnrD588YauBfdljk"});
-    if(fcmtoken){
-        console.log('Got fcm Token: ',fcmtoken)
-    }
+    async function requestPermission() {
+        const permission = await Notification.requestPermission();
+        if (permission === "granted") {
+        //   Generate Token
+          const token = await getToken(notification, {
+            vapidKey:
+              "BKMVkPQZtjekLsw0bevQlnoTgPPYVl1xArB44BN6HO3wZxa7GEKeoOA1ybxEJoGwiyE7bVNvnrD588YauBfdljk",
+          });
+          console.log("Token Gen", token);
+
+          // Send this token  to server ( db)
+        } else if (permission === "denied") {
+          alert("You denied for the notification");
+        }
+      }
+    
+      useEffect(() => {
+        // Req user for notification permission
+        requestPermission();
+      }, []);
+    
   return (
     <div>Msg</div>
   )
+
 }

@@ -2,7 +2,7 @@
 import React from "react";
 import { authorization } from "../firebase/clientapp";
 import {signInWithPopup, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 import GoogleButton from 'react-google-button'
 import GithubButton from 'react-github-login-button'
 

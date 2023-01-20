@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getFirestore } from 'firebase/firestore/lite';
 import { getAuth } from "firebase/auth";
+import { getMessaging } from "firebase/messaging";
 
 
 const clientCredentials = {
@@ -17,3 +18,4 @@ const clientCredentials = {
 const firebase = initializeApp(clientCredentials);
 export const db = getFirestore(firebase);
 export const authorization = getAuth(firebase);
+export const messaging = getMessaging(firebase);

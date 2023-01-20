@@ -39,7 +39,7 @@ export default function AllPosts() {
           allPostsData.map((post, index) => (
             <Link href={"/blog/" + post.slug.current} key={post.slug.current}  className={styles.card}>
               <div key={index}>
-                <img src={post.mainImage.asset.url} alt="" width={100} />
+                <img src={post.mainImage.asset.url} alt="" width={"20 pc"}height={"25 pc"} />
                     <h3>{post.title}</h3>
               </div>
             </Link>

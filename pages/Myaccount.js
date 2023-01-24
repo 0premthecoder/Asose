@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Todo from './components/Todo';
-
+import Announcement from './components/Announcement'
 import { signOut } from 'firebase/auth';
 import { authorization } from '../firebase/clientapp';
 import Router from "next/router";
@@ -54,7 +54,9 @@ function Myaccount() {
     else{
         setName("Please Login")
         // setEmail("Login Please")
+        Router.push('/')
     }
+    
 }
 
   useEffect(() => {
@@ -125,16 +127,15 @@ function Myaccount() {
         </h1>
         <h2 style={{ "color": '#0eb582' }}>{name}</h2>
         <button onClick={signout}>signout</button>
-        <div className={styles.grid}>
+        <div className={styles.grid} style={{"cursor": 'pointer'}}>
           <h4 className={active === 'o' ? styles.active : ''} onClick={() => setActive('o')}>Overview</h4>
           <h4 className={active === 't' ? styles.active : ''} onClick={() => setActive('t')}>Todos</h4>
           <h4 className={active === 'a' ? styles.active : ''} onClick={() => setActive('a')}>Announcement</h4>
         </div>
         {active === 'o' ? <Overview /> : ''}
         {active === 't' ? <Todo/> : ''}
-        
-        {active === 'a' ? <h3>Under Devlopment</h3> : ''}
-      </div> */}
+        {active === 'a' ? /*<h3>Under Devlopment</h3>*/<Announcement/> : ''}
+      </div>
 
       {/* <footer className={styles.footer}>
         <a

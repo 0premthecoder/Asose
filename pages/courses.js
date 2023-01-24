@@ -101,7 +101,7 @@ function courses() {
           <div className="box">
             <div className="image">
               <img src="/fashion1.jpg" alt="" />
-              <h3>Fashion designing</h3>
+              <h3>Fashion Design And Aesthetics</h3>
             </div>
             <div className="content">
               <h3>choose what's best for you!</h3>

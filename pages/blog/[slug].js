@@ -19,7 +19,7 @@ function post({ blog }) {
             </section>
 
             <section className='blogContent'>
-                <img src={blog.imageUrl}  alt="blogImage" />
+                <img src={blog.imageUrl}  alt="blogImage"/>
                 <div>
                     <h1>{blog.title}</h1>
                     <PortableText

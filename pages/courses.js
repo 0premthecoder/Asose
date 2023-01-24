@@ -2,10 +2,13 @@ import React from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Link from 'next/link'
-
+import Head from 'next/head'
 function courses() {
   return (
     <>
+    <Head>
+        <title>Courses - Asose Sector 5 Dwarka</title>
+      </Head>
       <Header />
       <section className="heading-link">
                 <h3>Courses</h3>

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import sanityClient from "../../sanity/blogclient";
 import Footer from "../components/Footer.js";
 import Header from "../components/Header.js";
-
+import Head from 'next/head';
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
 
@@ -27,6 +27,9 @@ export default function AllPosts() {
   }, []);
 
   return (<>
+  <Head>
+        <title>Blogs - Asose Sector 5 Dwarka</title>
+      </Head>
     <Header/>
     <section className="heading-link">
                 <h3>Blogs</h3>

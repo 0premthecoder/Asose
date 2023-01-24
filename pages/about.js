@@ -6,9 +6,13 @@ import Footer from "./components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { Pagination } from "swiper";
+import Head from "next/head";
 function About() {
     return (
         <>
+        <Head>
+        <title>About - Asose Sector 5 Dwarka</title>
+      </Head>
             <Header />
             <section class="heading-link">
                 <h3>about us</h3>

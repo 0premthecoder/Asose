@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import {getData} from './firebasedata';
 import { get, getUserByEmail } from './fireadddata';
 import SignUpForm from './SignUpForm';
-
+import Head from 'next/head';
 
 function Myaccount() {
   const [active, setActive] = useState('o')
@@ -89,6 +89,9 @@ function Myaccount() {
 
   return (
     <>
+    <Head>
+        <title>Dashboard - Asose Sector 5 Dwarka</title>
+      </Head>
     <ToastContainer
                 position="top-right"
                 autoClose={5000}

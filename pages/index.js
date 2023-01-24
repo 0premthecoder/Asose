@@ -9,7 +9,7 @@ import styles from './../styles/Home.module.css'
 // import { createClient } from "next-sanity";
 import Link from 'next/link';
 import { Pagination } from "swiper";
-
+import Head from 'next/head';
 // Images
 
 function Index() {
@@ -23,7 +23,9 @@ function Index() {
         // <React.Fragment>
         <>
 
-
+      <Head>
+        <title>Asose Sector 5 Dwarka</title>
+      </Head>
             {/* account form section ends */}
             {/* header section ends */}
             {/* home section starts  */}

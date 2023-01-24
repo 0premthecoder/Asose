@@ -4,10 +4,14 @@ import { createClient } from "next-sanity";
 import Header from '../components/Header';
 import Link from 'next/link';
 import Footer from '../components/Footer';
+import Head from 'next/head';
 function post({ blog }) {
     console.log(blog)
     return (
         <>
+            <Head>
+        <title>{blog.title} - Asose Sector 5 Dwarka</title>
+      </Head>
             <Header />
             <section class="heading-link">
                 <h3>{blog.title}</h3>

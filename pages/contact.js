@@ -3,11 +3,14 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Link from 'next/link'
 import styles from './../styles/Home.module.css'
-
+import Head from 'next/head'
 export default function contact() {
     const [quest, setQuest] = useState(' ')
   return (
     <>
+    <Head>
+        <title>Contact -Asose Sector 5 Dwarka</title>
+      </Head>
     <Header />
   <div className="account-form">
     <div id="close-form" className="fas fa-times" />

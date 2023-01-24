@@ -1025,11 +1025,11 @@ a:-webkit-any-link {
  }
 
  .blogContent p{
-  font-size:  4rem;
+  font-size:  2rem;
  }
 
  .blogContent h1{
-  font-size: 6rem;
+  font-size: 4rem;
  }
  
  @media (max-width: 1200px) {

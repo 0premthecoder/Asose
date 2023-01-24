@@ -17,7 +17,7 @@ export default function firebasedata() {
     }
     
   return (
-    
+    // gonna use
     <div>firebasedata</div>
   )
 }

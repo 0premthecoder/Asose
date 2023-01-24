@@ -11,7 +11,7 @@ function post({ blog }) {
             <Header />
             <section class="heading-link">
                 <h3>{blog.title}</h3>
-                <p> <Link href="/">Blogs</Link> / {blog.title} </p>
+                <p> <Link href="/blog/allpost">Blogs</Link> / {blog.title} </p>
             </section>
 
             <section className='blogContent'>

@@ -23,18 +23,18 @@ function Myaccount() {
     if (user !== null) {
     // The user object has basic properties such as display name, email, etc.
         const displayName = user.displayName;
-        const email = user.email;
+        // const email = user.email;
         const pic = user.photoURL;
-        const emailVerified = user.emailVerified;
+        // const emailVerified = user.emailVerified;
     
         // The user's ID, unique to the Firebase project. Do NOT use
         // this value to authenticate with your backend server, if
         // you have one. Use User.getToken() instead.
-        const uid = user.uid;
-        console.log(`UserName: ${displayName}`)
-        console.log(`Useremail: ${email}`)
-        console.log(`Userpic: ${pic}`)
-        console.log(`verified: ${emailVerified}`)
+        // const uid = user.uid;
+        // console.log(`UserName: ${displayName}`)
+        // console.log(`Useremail: ${email}`)
+        // console.log(`Userpic: ${pic}`)
+        // console.log(`verified: ${emailVerified}`)
         setPicture(pic)
         setName(displayName)
         // setEmail(email)

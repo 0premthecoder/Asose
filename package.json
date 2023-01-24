@@ -21,6 +21,8 @@
     "react-dom": "18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-firebaseui": "^6.0.0",
+    "react-github-login-button": "^1.0.1",
+    "react-google-button": "^0.7.2",
     "react-portable-text": "^0.5.1",
     "react-toastify": "^9.1.1",
     "sass": "^1.57.1",

@@ -48,7 +48,16 @@ a {
  .swiper-pagination-bullet-active {
   background-color: #0eb582 !important;
 }
- 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
  img {
    -webkit-user-select: none;
       -moz-user-select: none;

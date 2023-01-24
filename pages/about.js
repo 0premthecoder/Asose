@@ -87,7 +87,7 @@ function About() {
                     </Link>   
                         
                          <Link href={'/blog/fashion'}>
-                         <h3>Fashion Designing</h3>
+                         <h3>Fashion Design And Aesthetics</h3>
                          </Link>
                         
                     </div>

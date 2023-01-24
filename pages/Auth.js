@@ -15,7 +15,7 @@ function Auth() {
         await signInWithPopup(authorization, provider)
             .then((response) => {
                 console.log(response);
-                Router.push('/Myaccount')
+                // Router.push('/Myaccount')
             }).catch((error) => {
                 console.log(error);
             })
@@ -26,7 +26,7 @@ function Auth() {
         await signInWithPopup(authorization, provider)
             .then((response) => {
                 console.log(response);
-                Router.push('/Myaccount')
+                // Router.push('/Myaccount')
             }).catch((error) => {
                 console.log(error);
             })

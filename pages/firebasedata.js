@@ -1,8 +1,19 @@
 import React from 'react'
-import { collection, addDoc } from "firebase/firestore"; 
-import { db } from "../firebase/clientapp";
+import { collection, addDoc, query, where} from "firebase/firestore"; 
 
+import db from "../firebase/clientapp";
+
+export function getData() {
+  let users = []
+  const q = query(collection(db, 'users'), where("email","!=",null));
+  unsubscribe = onSnapshot(q, (querySnapshot) => {
+    users = users = querySnapshot.docs.map((d) => d.data());
+  });
+  console.log(users);
+}
 export default function firebasedata() {
+
+    
     async function addData() {
         try {
             const docRef = await addDoc(collection(db, "users"), {
@@ -18,6 +29,7 @@ export default function firebasedata() {
     
   return (
     // gonna use
-    <div>firebasedata</div>
+    <div>firebasedata
+    <input type="button" value={"ks"} onClick={addData} /></div>
   )
 }

@@ -113,10 +113,10 @@ function Index() {
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <img src="/fashion bg.png" alt="" />
-                                <h3>Fashion Designing</h3>
+                                <h3>Fashion Design And Aesthetics</h3>
                             </div>
                             <div className="content">
-                                <h3>Fashion Designing</h3>
+                                <h3>Fashion Design And Aesthetics</h3>
                                 <p>
                                 Creating unique garments and accessories that express personal style and reflect current trends...
                                 </p>

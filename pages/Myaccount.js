@@ -42,7 +42,9 @@ function Myaccount() {
     else{
         setName("Please Login")
         // setEmail("Login Please")
+        Router.push('/')
     }
+    
 }
 
   useEffect(() => {

@@ -134,7 +134,7 @@ function Myaccount() {
         </div>
         {active === 'o' ? <Overview /> : ''}
         {active === 't' ? <Todo/> : ''}
-        {active === 'a' ? /*<h3>Under Devlopment</h3>*/<Announcement/> : ''}
+        {active === 'a' ? <h3>Under Devlopment</h3> : ''}
       </div>
 
       {/* <footer className={styles.footer}>

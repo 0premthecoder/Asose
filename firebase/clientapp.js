@@ -14,6 +14,6 @@ const clientCredentials = {
 };
 
 
-const firebase = initializeApp(clientCredentials);
+export const firebase = initializeApp(clientCredentials);
 export const db = getFirestore(firebase);
 export const authorization = getAuth(firebase);

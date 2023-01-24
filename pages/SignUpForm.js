@@ -1,6 +1,26 @@
 
+import { useState } from 'react'
 import styles from '../styles/SignUpForm.module.css'
-export default function Teacher (){ return(
+import { add } from './fireadddata';
+import { authorization } from '../firebase/clientapp';
+export default function SignUpForm (){ 
+  
+  const [name, SetName] = useState('');
+  const [stdId, SetStdID] = useState('');
+  
+  function handleTextareaChange(e) {
+    SetName(e.target.value);
+  }
+  function handleStdIdChange(e) {
+    SetStdID(e.target.value);
+  }
+  function addUser(e){
+    e.preventDefault();
+    const user = authorization.currentUser;
+    add(name,stdId,user.email)
+  }
+
+  return(
   <div className={styles.container}>
     <div className={styles.form_area}>
       <h4 className={styles.title}>Fill your details</h4>
@@ -12,6 +32,7 @@ export default function Teacher (){ return(
           <input
             type="text"
             className={styles.form_style}
+            onChange={handleTextareaChange}
             id="name"
             placeholder="Enter your full name"
           />
@@ -21,14 +42,15 @@ export default function Teacher (){ return(
             Student ID
           </label>
           <input
-            type="text"
+            type="number"
             className={styles.form_style}
+            onChange={handleStdIdChange}
             id="id"
             placeholder="Enter your Student ID"
           />
         </div>
         <div>
-          <button className={styles.btn}>Done!</button>
+          <button className={styles.btn} onClick={addUser}>Done!</button>
           <p>
             Students{" "}
             <a href="student.html" className={styles.link}>

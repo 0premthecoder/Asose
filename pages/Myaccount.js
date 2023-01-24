@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Todo from './components/Todo';
-
+import Announcement from './components/Announcement'
 import { signOut } from 'firebase/auth';
 import { authorization } from '../firebase/clientapp';
 import Router from "next/router";
@@ -103,7 +103,7 @@ function Myaccount() {
         </div>
         {active === 'o' ? <Overview /> : ''}
         {active === 't' ? <Todo/> : ''}
-        {active === 'a' ? <h3>Under Devlopment</h3> : ''}
+        {active === 'a' ? /*<h3>Under Devlopment</h3>*/<Announcement/> : ''}
       </div>
 
       {/* <footer className={styles.footer}>

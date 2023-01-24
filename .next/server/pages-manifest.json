@@ -1,38 +1,7 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/Auth": "pages/Auth.html",
-  "/Myaccount": "pages/Myaccount.html",
-  "/about": "pages/about.html",
-  "/api/addtodo": "pages/api/addtodo.js",
-  "/api/fetchtodo": "pages/api/fetchtodo.js",
-  "/api/hello": "pages/api/hello.js",
-  "/api/login": "pages/api/login.js",
-  "/api/signup": "pages/api/signup.js",
-  "/api/todo": "pages/api/todo.js",
-  "/blog/allpost": "pages/blog/allpost.html",
-  "/components/AccountForm": "pages/components/AccountForm.html",
-  "/components/DashboardHeader": "pages/components/DashboardHeader.html",
-  "/components/Footer": "pages/components/Footer.html",
-  "/components/Header": "pages/components/Header.html",
-  "/components/HomeHeader": "pages/components/HomeHeader.html",
-  "/components/Overview": "pages/components/Overview.html",
-  "/components/Todo": "pages/components/Todo.html",
-  "/components/TodoItem": "pages/components/TodoItem.html",
-  "/components/Top": "pages/components/Top.html",
-  "/contact": "pages/contact.html",
-  "/courses": "pages/courses.html",
-  "/firebasedata": "pages/firebasedata.html",
-  "/": "pages/index.html",
-  "/login": "pages/login.html",
-  "/signup": "pages/signup.html",
-  "/todo": "pages/todo.html",
-  "/blog/[slug]": "pages/blog/[slug].js",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
-  "/about": "pages/about.js",
-  "/courses": "pages/courses.js"
-=======
-  "/404": "pages/404.html"
->>>>>>> 50fbb33da79a8a55d6733841efd440fd173fccaf
+  "/Myaccount": "pages/Myaccount.js",
+  "/": "pages/index.js"
 }

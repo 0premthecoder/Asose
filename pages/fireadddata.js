@@ -27,6 +27,7 @@ export const add = async(Name, StdId, Email)=>{
         score: 0,
         student_id: StdId
       });
+      Router.push("/Myaccount")
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
       console.error("Error adding document: ", e);

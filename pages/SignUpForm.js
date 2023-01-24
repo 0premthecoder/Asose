@@ -3,6 +3,8 @@ import { useState } from 'react'
 import styles from '../styles/SignUpForm.module.css'
 import { add } from './fireadddata';
 import { authorization } from '../firebase/clientapp';
+import Router from 'next/router';
+
 export default function SignUpForm (){ 
   
   const [name, SetName] = useState('');
@@ -18,6 +20,7 @@ export default function SignUpForm (){
     e.preventDefault();
     const user = authorization.currentUser;
     add(name,stdId,user.email)
+    Router.push("/")
   }
 
   return(

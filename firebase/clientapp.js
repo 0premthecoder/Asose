@@ -1,6 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { getAuth } from "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
+
+
 
 
 const clientCredentials = {
@@ -17,3 +20,7 @@ const clientCredentials = {
 export const firebase = initializeApp(clientCredentials);
 export const db = getFirestore(firebase);
 export const authorization = getAuth(firebase);
+
+if (firebase.name && typeof window !== 'undefined') {
+  const analytics = getAnalytics(firebase);
+}

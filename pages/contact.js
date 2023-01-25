@@ -119,7 +119,7 @@ export default function contact() {
       </div>
       <div className={`accordion ${quest === '2' ? 'active' : ' ' }`}>
         <div className="accordion-heading">
-          <h3>what is the best skill cource in 2022?</h3>
+          <h3>what is the best skill course in 2022?</h3>
           <i className="fas fa-angle-down" onClick={ ()=> quest === '2' ? setQuest(' ') : setQuest('2')} />
         </div>
         <p className="accordion-content">

@@ -212,8 +212,8 @@ function About() {
                                 </div>
                             </div>
                             <div className="content">
-                                <h3>Abhin</h3>
-                                <span>Becknd</span>
+                                <h3>Abhinn</h3>
+                                <span>Backend</span>
                             </div>
                         </SwiperSlide>
                         

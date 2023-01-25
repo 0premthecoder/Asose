@@ -114,10 +114,7 @@ export default function contact() {
           <i className="fas fa-angle-down" onClick={ ()=> quest === '1' ? setQuest(' ') : setQuest('1')} />
         </div>
         <p className="accordion-content">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
-          consequatur molestias deserunt facere laborum doloremque fuga, quae
-          aut. Recusandae officia quis temporibus! Magnam mollitia nostrum
-          voluptatibus deserunt quidem. Natus, quo.
+          You can Contact us via visiting our school or visiting contact us page of our website.
         </p>
       </div>
       <div className={`accordion ${quest === '2' ? 'active' : ' ' }`}>
@@ -126,10 +123,9 @@ export default function contact() {
           <i className="fas fa-angle-down" onClick={ ()=> quest === '2' ? setQuest(' ') : setQuest('2')} />
         </div>
         <p className="accordion-content">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
-          consequatur molestias deserunt facere laborum doloremque fuga, quae
-          aut. Recusandae officia quis temporibus! Magnam mollitia nostrum
-          voluptatibus deserunt quidem. Natus, quo.
+          We will give you tester course of all skills then you can choose from them
+           what skill is best for you if you have any problem after it we also conduct 
+           a seminar for students and parents for helping them in their decision.
         </p>
       </div>
       {/* <div className="accordion">

@@ -4,11 +4,12 @@ import styles from '../styles/SignUpForm.module.css'
 import { add } from './fireadddata';
 import { authorization } from '../firebase/clientapp';
 import Router from 'next/router';
+import Link from 'next/link';
 
 export default function SignUpForm (){ 
   
-  const [name, SetName] = useState('');
-  const [stdId, SetStdID] = useState('');
+  const [name, SetName] = useState('User');
+  const [stdId, SetStdID] = useState(0);
   
   function handleTextareaChange(e) {
     SetName(e.target.value);
@@ -55,10 +56,10 @@ export default function SignUpForm (){
         <div>
           <button className={styles.btn} onClick={addUser}>Done!</button>
           <p>
-            Students{" "}
-            <a href="student.html" className={styles.link}>
+            Others{" "}
+            <Link href="/Myaccount" className={styles.link} onClick={addUser}>
               Login Here!
-            </a>
+            </Link>
           </p>
           <a href="student.html" className={styles.link}></a>
         </div>

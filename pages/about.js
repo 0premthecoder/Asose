@@ -201,6 +201,22 @@ function About() {
                                 <span>Frontend</span>
                             </div>
                         </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
+                            <div className="image">
+                                <img src="#" alt="" />
+                                <div className="share">
+                                    <a href="#" className="fab fa-facebook-f"></a>
+                                    <a href="#" className="fab fa-twitter"></a>
+                                    <a href="#" className="fab fa-instagram"></a>
+
+                                </div>
+                            </div>
+                            <div className="content">
+                                <h3>Abhin</h3>
+                                <span>Becknd</span>
+                            </div>
+                        </SwiperSlide>
+                        
 
 
                     </div>

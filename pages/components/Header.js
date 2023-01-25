@@ -8,7 +8,7 @@ function Header() {
     const [navactive, setNavactive] = useState('')
     const router = useRouter()
     const togglepage = (active) => {
-        if (!localStorage.getItem('token')) {
+        if (!localStorage.getItem('name')) {
             setIsOpen(active)
         } else {
             router.push('/Myaccount')

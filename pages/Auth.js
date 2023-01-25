@@ -14,7 +14,9 @@ function Auth() {
         const provider = new GithubAuthProvider();
         await signInWithPopup(authorization, provider)
             .then((response) => {
-                console.log(response);
+                localStorage.setItem('name',response.user.displayName)
+                localStorage.setItem('pic',response.user.photoURL)
+                localStorage.setItem('mail',response.user.email)
                 Router.push('/Myaccount')
             }).catch((error) => {
                 console.log(error);
@@ -25,7 +27,10 @@ function Auth() {
         const provider = new GoogleAuthProvider();
         await signInWithPopup(authorization, provider)
             .then((response) => {
-                console.log(response);
+                // console.log(response.user.photoURL);
+                localStorage.setItem('name',response.user.displayName)
+                localStorage.setItem('pic',response.user.photoURL)
+                localStorage.setItem('mail',response.user.email)
                 Router.push('/Myaccount')
             }).catch((error) => {
                 console.log(error);

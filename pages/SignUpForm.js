@@ -6,7 +6,7 @@ import { authorization } from '../firebase/clientapp';
 import Router from 'next/router';
 import Link from 'next/link';
 
-export default function SignUpForm (){ 
+export default function SignUpForm (props){ 
   
   const [name, SetName] = useState('User');
   const [stdId, SetStdID] = useState(0);
@@ -19,9 +19,9 @@ export default function SignUpForm (){
   }
   function addUser(e){
     e.preventDefault();
-    const user = authorization.currentUser;
-    add(name,stdId,user.email)
-    Router.push("/")
+    add(name,stdId,localStorage.getItem('mail'))
+    Router.push("/Myaccount")
+    props.popup('0')
   }
 
   return(

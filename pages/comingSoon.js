@@ -1,5 +1,6 @@
 import styles from "../styles/comingsoon.module.css"
 import { useRef , useState, useEffect} from "react";
+import Router from "next/router";
 
 const ComingSoon = () => {
 
@@ -24,7 +25,7 @@ const ComingSoon = () => {
         let { total, hours, minutes, seconds } 
                     = getTimeRemaining(e);
         if (total >= 0) {
-  
+            console.log(timer)
             // update the timer
             // check if less than 10 then we need to 
             // add '0' at the beginning of the variable
@@ -42,7 +43,7 @@ const ComingSoon = () => {
         // If you adjust it you should also need to
         // adjust the Endtime formula we are about
         // to code next    
-        setTimer('24:00:00');
+        setTimer('00:00:10');
   
         // If you try to remove this line the 
         // updating of timer Variable will be
@@ -79,7 +80,9 @@ const ComingSoon = () => {
     const onClickReset = () => {
         clearTimer(getDeadTime());
     }
-  
+    if(timer === 0){
+        window.location.href = "https://drive.google.com/file/d/1uw9TjAmmWxO8I7bELFVwjSi8JkXQ6QL1/view"
+    }
 
     return (
         <>
@@ -89,10 +92,22 @@ const ComingSoon = () => {
                     <h1 className={styles.h1}>COMING SOON</h1>
                     <hr className={styles.hr}/>
                     <p className={styles.p} id="launch">{timer}</p>
+                    <a href="https://drive.google.com/file/d/1uw9TjAmmWxO8I7bELFVwjSi8JkXQ6QL1/view">Launch</a>
                 </div>
             </header>
         </>
     )
 }
+
+// const Trailer = () => {
+//     const myCallback = () => Router.push("/");
+//     return(
+
+//     // <video autoplay onEnded={() => myCallback()}>
+//     //     <source src={"https://drive.google.com/file/d/1uw9TjAmmWxO8I7bELFVwjSi8JkXQ6QL1/view"} type="video/mp4" />
+//     // </video>
+//     // <iframe src="https://drive.google.com/file/d/1uw9TjAmmWxO8I7bELFVwjSi8JkXQ6QL1/preview" width="640" height="480" allow="autoplay"></iframe>
+//     )
+// }
 
 export default ComingSoon

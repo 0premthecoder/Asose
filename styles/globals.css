@@ -1034,11 +1034,6 @@ a:-webkit-any-link {
    color: #0eb582;
  }
 
- .blogContent img{
-  width: 70%;
-  height: 70%;
- }
-
  .blogContent p{
   font-size:  2rem;
  }

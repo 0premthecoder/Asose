@@ -118,9 +118,8 @@ function Myaccount() {
           <h4 className={active === 't' ? styles.active : ''} onClick={() => setActive('t')}>Todos</h4>
           <h4 className={active === 'a' ? styles.active : ''} onClick={() => setActive('a')}>Announcement</h4>
         </div>
-        {active === 'o' ? <Overview /> : ''}
+        {active === 'o' ? <h3>Under devlopment</h3> : ''}
         {active === 't' ? <Todo/> : ''}
-        
         {active === 'a' ? <h3>Under Devlopment</h3> : ''}
       </div>}
       {/* <div className={styles.main}>

@@ -228,7 +228,7 @@ function About() {
 
             {/* students reviews section starts  */}
 
-            <section className="reviews">
+            {/* <section className="reviews">
 
                 <h1 className="heading"> our students review </h1>
 
@@ -275,7 +275,7 @@ function About() {
 
                     </div>
                 </Swiper>
-            </section>
+            </section> */}
             <Footer />
         </>
     );

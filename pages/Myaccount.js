@@ -113,7 +113,7 @@ function Myaccount() {
         </h1>
         <h2 style={{ "color": '#0eb582' }}>{name}</h2>
         <button onClick={signout}>signout</button>
-        <div className={styles.grid}>
+        <div className={styles.grid} style={{"cursor":'pointer'}}>
           <h4 className={active === 'o' ? styles.active : ''} onClick={() => setActive('o')}>Overview</h4>
           <h4 className={active === 't' ? styles.active : ''} onClick={() => setActive('t')}>Todos</h4>
           <h4 className={active === 'a' ? styles.active : ''} onClick={() => setActive('a')}>Announcement</h4>

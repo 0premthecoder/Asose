@@ -139,7 +139,7 @@ function About() {
 
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/teacher-2.png" alt="" />
+                                <img src="/prem.webp" alt="" />
                                 <div className="share">
                                     <a href="#" className="fab fa-facebook-f"></a>
                                     <a href="#" className="fab fa-twitter"></a>
@@ -149,14 +149,14 @@ function About() {
                                 </div>
                             </div>
                             <div className="content">
-                                <h3>Name </h3>
+                                <h3>Prem</h3>
                                 <span>Backend Developer</span>
                             </div>
                         </SwiperSlide>
 
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/teacher69.png" alt="" />
+                                <img src="/shubh1.jpg" alt="" />
                                 <div className="share">
                                     <a href="#" className="fab fa-facebook-f"></a>
                                     <a href="#" className="fab fa-twitter"></a>
@@ -165,14 +165,15 @@ function About() {
                                 </div>
                             </div>
                             <div className="content">
-                                <h3>Name </h3>
+                                <h3>Shubham </h3>
                                 <span>Fontend Developer</span>
                             </div>
                         </SwiperSlide>
 
+                        
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/teacher-2.png" alt="" />
+                                <img src="/karanvir.png" alt="" />
                                 <div className="share">
                                     <a href="#" className="fab fa-facebook-f"></a>
                                     <a href="#" className="fab fa-twitter"></a>
@@ -181,8 +182,23 @@ function About() {
                                 </div>
                             </div>
                             <div className="content">
-                                <h3>Teacher</h3>
-                                <span>expert coder</span>
+                                <h3>Karanvir</h3>
+                                <span>Frontend</span>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
+                            <div className="image">
+                                <img src="/aman.webp" alt="" />
+                                <div className="share">
+                                    <a href="#" className="fab fa-facebook-f"></a>
+                                    <a href="#" className="fab fa-twitter"></a>
+                                    <a href="#" className="fab fa-instagram"></a>
+
+                                </div>
+                            </div>
+                            <div className="content">
+                                <h3>Aman</h3>
+                                <span>Frontend</span>
                             </div>
                         </SwiperSlide>
 

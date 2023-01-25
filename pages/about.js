@@ -156,7 +156,7 @@ function About() {
 
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/teacher-2.png" alt="" />
+                                <img src="/teacher69.png" alt="" />
                                 <div className="share">
                                     <a href="#" className="fab fa-facebook-f"></a>
                                     <a href="#" className="fab fa-twitter"></a>

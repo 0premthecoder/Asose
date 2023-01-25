@@ -24,7 +24,8 @@ function Myaccount() {
     if (localStorage.length != null) {
       setName(localStorage.getItem('name'))
       setPicture(localStorage.getItem('pic'))
-      const users = await getUserByEmail(localStorage.getItem('email'))
+      const users = await getUserByEmail(localStorage.getItem('mail'))
+      // console.log(users.length)
       if (users.length === 0) {
         setShowPopup('1')
       }

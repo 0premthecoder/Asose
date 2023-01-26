@@ -19,7 +19,6 @@ function Myaccount() {
   const [picture, setPicture] = useState('')
   const [showPopup, setShowPopup] = useState('0')
 
-
   async function show() {
     if (localStorage.length != null) {
       setName(localStorage.getItem('name'))

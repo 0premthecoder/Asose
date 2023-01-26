@@ -5,12 +5,10 @@ export default function HomeHeader() {
             <div className="swiper-wrapper">
                 <section
                     className="swiper-slide slide"
-                    style={{ background: "url(./../home-slide-1.jpg) no-repeat" }}
-                >
+                    style={{ background: "url(./../home-slide-1.jpg) no-repeat" }}>
                     <div className="content">
                         <h3>Dr.B.R.Ambedkar School of Specialised Excellence</h3>
-                        <p>HE-21 Century Skill
-,Dwarka Sector-5</p>
+                        <p>HE-21 Century Skill,Dwarka Sector-5</p>
                         {/*<a href="#" class="btn">Read more</a>*/}
 
                     </div>

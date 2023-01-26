@@ -20,14 +20,24 @@ function Myaccount() {
   const [showPopup, setShowPopup] = useState('0')
 
   async function show() {
-    if (localStorage.length != null) {
+    if (localStorage.getItem('name')) {
       setName(localStorage.getItem('name'))
       setPicture(localStorage.getItem('pic'))
       const users = await getUserByEmail(localStorage.getItem('mail'))
-      // console.log(users.length)
+      console.log(users.length)
       if (users.length === 0) {
         setShowPopup('1')
       }
+      toast.success('User Logined Successfully!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
     else {
       Router.push('/')
@@ -37,17 +47,6 @@ function Myaccount() {
   useEffect(() => {
     // Perform localStorage action
     show()
-
-    toast.success('🦄 User Logined Successfully!', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
   }, [])
 
   async function signout() {

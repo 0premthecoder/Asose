@@ -1041,7 +1041,10 @@ a:-webkit-any-link {
  .blogContent h1{
   font-size: 4rem;
  }
- 
+
+ .blogContent img{
+  width: 60%;
+ }
  @media (max-width: 1200px) {
    .header {
      padding: 2rem 5%;

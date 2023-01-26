@@ -12,15 +12,15 @@ export default function AllPosts() {
     sanityClient
       .fetch(
         `*[_type == "post"  && blog == true]{
-        title,
-        slug,
-        mainImage{
-          asset->{
-          _id,
-          url
+          title,
+          slug,
+          mainImage{
+            asset->{
+            _id,
+            url
+          }
         }
-      }
-    }`
+      }`
       )
       .then((data) => setAllPosts(data))
       .catch(console.error);

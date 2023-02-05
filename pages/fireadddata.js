@@ -1,9 +1,9 @@
 import { collection, addDoc, query, where, onSnapshot, getDocs, collectionRef, updateDoc} from "firebase/firestore"; 
  import firebase from '../firebase/clientapp'
 import React from 'react'
-import { initializeApp } from "firebase/app";
+// import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import Router  from "next/router";
+// import Router  from "next/router";
 const db = getFirestore(firebase);
 export async function getUserByEmail(email) {
   // Make the initial query

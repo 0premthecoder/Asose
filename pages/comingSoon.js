@@ -1,6 +1,6 @@
 import styles from "../styles/comingsoon.module.css"
 import { useRef , useState, useEffect} from "react";
-import Router from "next/router";
+
 
 const ComingSoon = () => {
 

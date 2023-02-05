@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import styles from '../styles/SignUpForm.module.css'
 import { add } from './fireadddata';
-import { authorization } from '../firebase/clientapp';
+// import { authorization } from '../firebase/clientapp';
 import Router from 'next/router';
 import Link from 'next/link';
 

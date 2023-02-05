@@ -18,7 +18,7 @@ function Header() {
     return <>
         <header className="header">
               <div className="image">
-  <img src="logo.png" alt="" style={{ height: 25 }} />
+  {/* <img src="logo.png" alt="" style={{ height: 25 }} /> */}
 </div>
             <Link href="/" className="logo">
                 {" "}

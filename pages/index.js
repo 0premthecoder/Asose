@@ -22,7 +22,7 @@ function Index() {
     };
 
     toast.info('Login for getting Special features', {
-        position: "top-right",
+        position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,

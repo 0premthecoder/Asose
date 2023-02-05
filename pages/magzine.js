@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 import  Router from 'next/router'
 import Magzinecomponent from './components/Magzinecomponent'
+
 export default function magzine() {
     const [login, setLogin] = useState(false)
     useEffect(() => {

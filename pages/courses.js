@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 function courses() {
   return (
     <>
@@ -19,7 +20,8 @@ function courses() {
         <div className="box-container">
           <div className="box">
             <div className="image">
-              <img src="/course-2-1.jpg" alt="" />
+              <Image width={350}
+                            height={250} src="/course-2-1.jpg" alt="" />
               <h3>Coding</h3>
             </div>
             <div className="content">
@@ -40,7 +42,8 @@ function courses() {
           </div>
           <div className="box">
             <div className="image">
-              <img src="/course-2-2.jpg" alt="" />
+              <Image width={350}
+                            height={250} src="/course-2-2.jpg" alt="" />
               <h3>Electro Mechanical Production</h3>
             </div>
             <div className="content">
@@ -61,7 +64,8 @@ function courses() {
           </div>
           <div className="box">
             <div className="image">
-              <img src="/finance2.webp" alt="" />
+              <Image width={350}
+                            height={250} src="/finance2.webp" alt="" />
               <h3>Finance &amp; Accounting</h3>
             </div>
             <div className="content">
@@ -82,7 +86,8 @@ function courses() {
           </div>
           <div className="box">
             <div className="image">
-              <img src="/course-2-7.jpg" alt="" />
+              <Image width={350}
+                            height={250} src="/course-2-7.jpg" alt="" />
               <h3>Digital media &amp; designing</h3>
             </div>
             <div className="content">
@@ -103,7 +108,8 @@ function courses() {
           </div>
           <div className="box">
             <div className="image">
-              <img src="/fashion1.jpg" alt="" />
+              <Image width={350}
+                            height={250} src="/fashion1.jpg" alt="" />
               <h3>Fashion Design And Aesthetics</h3>
             </div>
             <div className="content">
@@ -124,7 +130,8 @@ function courses() {
           </div>
           <div className="box">
             <div className="image">
-              <img src="/robot skill.jpg" alt="" />
+              <Image width={350}
+                            height={250} src="/robot skill.jpg" alt="" />
               <h3>Robotics</h3>
             </div>
             <div className="content">

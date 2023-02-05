@@ -38,7 +38,7 @@ function Index() {
 
             <Head>
                 <title>Asose Sector 5 Dwarka</title>
-                <meta name="description" content="Fuck You Fuck off" />
+                <meta name="description" content="DBRA Sose Dwarka Sector-5 HE-21 is known for providing skills to student" />
             </Head>
             {/* account form section ends */}
             {/* header section ends */}

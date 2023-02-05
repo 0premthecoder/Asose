@@ -29,7 +29,7 @@ function Myaccount() {
         setShowPopup('1')
       }
       toast.success('User Logined Successfully!', {
-        position: "top-right",
+        position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -65,7 +65,7 @@ function Myaccount() {
         <title>Dashboard - Asose Sector 5 Dwarka</title>
       </Head>
       <ToastContainer
-        position="top-right"
+        position="top-center"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}

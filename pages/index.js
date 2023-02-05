@@ -21,7 +21,7 @@ function Index() {
         console.log(showForm)
     };
 
-    toast.success('Login for getting Special features', {
+    toast.info('Login for getting Special features', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -52,7 +52,7 @@ function Index() {
             {/* home courses slider section starts  */}
 
             <ToastContainer
-                position="top-right"
+                position="top-center"
                 autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}

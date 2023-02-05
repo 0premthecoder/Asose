@@ -10,6 +10,8 @@ import styles from './../styles/Home.module.css'
 import Link from 'next/link';
 import { Pagination } from "swiper";
 import Head from 'next/head';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // Images
 
 function Index() {
@@ -18,6 +20,17 @@ function Index() {
         SetshowForm(bool);
         console.log(showForm)
     };
+
+    toast.success('Login for getting Special features', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
 
     return (
         // <React.Fragment>

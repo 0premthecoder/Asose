@@ -11,14 +11,14 @@ function About() {
     return (
         <>
         <Head>
-        <title>About - Asose Sector 5 Dwarka</title>
+        <title>About - Developers</title>
       </Head>
             <Header />
             <section class="heading-link">
                 <h3>about us</h3>
                 <p> <Link href="/">home</Link> / about </p>
             </section>
-            <section className="subjects">
+            {/* <section className="subjects">
                 <h1 className="heading">We Have Best Skill Courses For You</h1>
                 <div className="box-container">
                     <div className="box">
@@ -110,7 +110,7 @@ function About() {
                         
                     </div>
                 </div>
-            </section>
+            </section> */}
 
            
             {/* about section ends */}
@@ -139,7 +139,8 @@ function About() {
 
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/prem.webp" alt="" />
+                                <Image width={100}
+                            height={500} src="/prem.webp" alt="" />
                                 <div className="share">
                                     <Link href="/blog/prem-kumar" className="fab fa-facebook-f"></Link>
                                     <a href="#" className="fab fa-twitter"></a>
@@ -156,7 +157,8 @@ function About() {
 
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/shubh1.jpg" alt="" />
+                                <Image width={100}
+                            height={500} src="/shubh1.jpg" alt="" />
                                 <div className="share">
                                     <Link href="/blog/shubham" className="fab fa-facebook-f"></Link>
                                     <a href="#" className="fab fa-twitter"></a>
@@ -173,7 +175,8 @@ function About() {
                         
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/karanvir.png" alt="" />
+                                <Image width={100}
+                            height={500} src="/karanvir.png" alt="" />
                                 <div className="share">
                                     <Link href="/blog/karanvir-vohra" className="fab fa-facebook-f"></Link>
                                     <a href="#" className="fab fa-twitter"></a>
@@ -188,7 +191,8 @@ function About() {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/aman.webp" alt="" />
+                                <Image width={100}
+                            height={300} src="/aman.webp" alt="" />
                                 <div className="share">
                                     <Link href="/blog/aman-kumar" className="fab fa-facebook-f"></Link>
                                     <a href="#" className="fab fa-twitter"></a>
@@ -203,7 +207,8 @@ function About() {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <img src="/abhiin.jpg" alt="" />
+                                <Image width={100}
+                            height={300} src="/abhiin.jpg" alt="" />
                                 <div className="share">
                                     <Link href="/blog/abhinn-pandey" className="fab fa-facebook-f"></Link>
                                     <a href="#" className="fab fa-twitter"></a>

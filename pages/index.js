@@ -56,7 +56,7 @@ function Index() {
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <Image src="/Course1-1.png" 
-                                width={300}
+                                width={400}
                                 height={300}
                                  alt="coding" />
                                 <h3>Coding</h3>
@@ -73,7 +73,7 @@ function Index() {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <Image width={300}
+                                <Image width={400}
                                 height={300}  src="/emp2.png" alt="" />
                                 <h3>Electro Mechanical &amp;Production</h3>
                             </div>
@@ -89,7 +89,7 @@ function Index() {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <Image width={300}
+                                <Image width={400}
                                 height={300} src="/finance.png" alt="" />
                                 <h3>Finance &amp; Accounting</h3>
                             </div>
@@ -105,7 +105,7 @@ function Index() {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <Image width={300}
+                                <Image width={400}
                                 height={300} src="/robotics.png" alt="" />
                                 <h3>Robotics</h3>
                             </div>
@@ -121,7 +121,7 @@ function Index() {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <Image width={300}
+                                <Image width={400}
                                 height={300} src="/fashion bg.png" alt="" />
                                 <h3>Fashion Design And Aesthetics</h3>
                             </div>
@@ -137,7 +137,7 @@ function Index() {
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slide">
                             <div className="image">
-                                <Image width={300}
+                                <Image width={400}
                                 height={300} src="/dmd1.png" alt="" />
                                 <h3>Digital Media &amp; Design</h3>
                             </div>

@@ -5,6 +5,8 @@ import sanityClient from "../../sanity/blogclient";
 import Footer from "../components/Footer.js";
 import Header from "../components/Header.js";
 import Head from 'next/head';
+import Script from 'next/script'
+
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
 
@@ -29,6 +31,8 @@ export default function AllPosts() {
   return (<>
   <Head>
         <title>Blogs - Asose Sector 5 Dwarka</title>
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
+     crossorigin="anonymous"></Script>
       </Head>
     <Header/>
     <section className="heading-link">

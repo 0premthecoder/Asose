@@ -5,12 +5,16 @@ import Header from '../components/Header';
 import Link from 'next/link';
 import Footer from '../components/Footer';
 import Head from 'next/head';
+import Script from 'next/script'
+
 function post({ blog }) {
     console.log(blog)
     return (
         <>
             <Head>
         <title>{blog.title} - Asose Sector 5 Dwarka</title>
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
+     crossorigin="anonymous"></Script>
       </Head>
             <Header />
             <section class="heading-link">

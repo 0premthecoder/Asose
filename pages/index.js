@@ -11,6 +11,8 @@ import Link from 'next/link';
 import { Pagination } from "swiper";
 import Head from 'next/head';
 import { ToastContainer, toast } from 'react-toastify';
+import Script from 'next/script'
+
 import 'react-toastify/dist/ReactToastify.css';
 // Images
 
@@ -39,6 +41,8 @@ function Index() {
             <Head>
                 <title>Asose Sector 5 Dwarka</title>
                 <meta name="description" content="DBRA Sose Dwarka Sector-5 HE-21 is known for providing skills to student" />
+                <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
+     crossorigin="anonymous"></Script>
             </Head>
             {/* account form section ends */}
             {/* header section ends */}

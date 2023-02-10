@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+
 function MyApp({ Component, pageProps }) {
   const [hydrated, setHydrated] = React.useState(false);
   React.useEffect(() => {

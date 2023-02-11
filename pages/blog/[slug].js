@@ -13,8 +13,9 @@ function post({ blog }) {
         <>
             <Head>
         <title>{blog.title} - Asose Sector 5 Dwarka</title>
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
-     crossorigin="anonymous"></Script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
+     crossorigin="anonymous"></script>
+
       </Head>
             <Header />
             <section class="heading-link">

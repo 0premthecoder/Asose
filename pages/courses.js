@@ -4,14 +4,14 @@ import Footer from './components/Footer'
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
-import Script from 'next/script'
+// import Script from 'next/script'
 
 function courses() {
   return (
     <>
     <Head>
-    <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
-     crossorigin="anonymous"></Script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
+     crossorigin="anonymous"></script>
         <title>Courses - Asose Sector 5 Dwarka</title>
       </Head>
       <Header />

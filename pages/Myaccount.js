@@ -12,7 +12,6 @@ import Footer from './components/Footer';
 import { getUserByEmail } from './fireadddata';
 import SignUpForm from './SignUpForm';
 import Head from 'next/head';
-import Script from 'next/script'
 
 function Myaccount() {
   const [active, setActive] = useState('o')
@@ -64,8 +63,8 @@ function Myaccount() {
     <>
       <Head>
         <title>Dashboard - Asose Sector 5 Dwarka</title>
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
-     crossorigin="anonymous"></Script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
+     crossorigin="anonymous"></script>
       </Head>
       <ToastContainer
         position="top-center"

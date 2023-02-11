@@ -7,15 +7,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Pagination } from "swiper";
 import Head from "next/head";
-import Script from 'next/script'
 
 function About() {
     return (
         <>
         <Head>
         <title>About - Developers</title>
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
-     crossorigin="anonymous"></Script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
+     crossorigin="anonymous"></script>
       </Head>
             <Header />
             <section class="heading-link">

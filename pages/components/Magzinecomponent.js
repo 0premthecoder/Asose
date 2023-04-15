@@ -2,8 +2,7 @@ import React from 'react'
 import Script from 'next/script'
 export default function Magzinecomponent() {
   return (
-    <div><a href="https://online.flippingbook.com/view/651093132/" className="fbo-embed" data-fbo-id="17d71b5e67" data-fbo-ratio="3:2" data-fbo-lightbox="yes" data-fbo-width="100%" data-fbo-height="auto" data-fbo-version="1" style={{maxWidth: "100%"}}>magzine </a>
-    <Script src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=651093132"></Script></div>
+    <div><<iframe frameborder="0" allowtransparency="true" allowFullscreen="true" style="width: 100%; height: 480px; border: none;" src="https://online.visual-paradigm.com/share/book/magzine-compressed-1bnm9vq54i?p=1"></iframe>/div>
   )
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link'
 
 export default function Footer() {
     return <section className="footer">
@@ -18,7 +19,7 @@ export default function Footer() {
         </div>
         <div className="credit">
             {" "}
-            created by <span>Coding Team @ SOSE sec 5</span> {" "}
+            created by <Link href='/about'><span>Coding Team @ SOSE sec 5</span></Link> {" "}
         </div>
     </section>;
 }

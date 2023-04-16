@@ -24,7 +24,7 @@ export default function DashboardHeader() {
             <nav className={`navbar ${navactive}`} >
                 <div id="close-navbar" className="fas fa-times" onClick={() => setNavactive('')} />
                 <Link href='/Myaccount'><i className="fa fa-user-secret" aria-hidden="true"></i></Link>
-                <Link href="/magzine">Magzine</Link>
+                <Link href="https://www.canva.com/design/DAFYQx5L0DQ/vSVkOgr0sGKeE-BQjtVn6Q/edit?utm_content=DAFYQx5L0DQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Magzine</Link>
                 <Link href="/"><i className="fa fa-user-times" aria-hidden="true"></i></Link>
                 {/* <Link href="/contact">Contact</Link> */}
             </nav>

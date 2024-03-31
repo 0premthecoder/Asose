@@ -39,10 +39,18 @@ function Index() {
         <>
 
             <Head>
+
                 <title>Asose Sector 5 Dwarka</title>
                 <meta name="description" content="DBRA Sose Dwarka Sector-5 HE-21 is known for providing skills to student" />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
-     crossorigin="anonymous"></script>
+                    crossorigin="anonymous"></script>
+                
+                    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+
+                    
+                    <script src="https://mediafiles.botpress.cloud/e61ae656-7099-4767-9121-00a78d5fa832/webchat/config.js" defer></script>
+
+                
             </Head>
             {/* account form section ends */}
             {/* header section ends */}

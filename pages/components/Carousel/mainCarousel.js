@@ -16,6 +16,7 @@ const MainCarousel = () => {
   return (
     <AliceCarousel
       items={items}
+      
       disableButtonsControls
       autoPlay
       autoPlayInterval={5000}

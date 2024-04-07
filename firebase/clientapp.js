@@ -14,10 +14,12 @@ const clientCredentials = {
 };
 
 
-export default firebase = initializeApp(clientCredentials);
+export const firebase = initializeApp(clientCredentials);
 export const db = getFirestore(firebase);
 export const authorization = getAuth(firebase);
 
 if (firebase.name && typeof window !== 'undefined') {
   const analytics = getAnalytics(firebase);
 }
+
+export default firebase;

@@ -46,8 +46,6 @@ function Index() {
                     crossorigin="anonymous"></script>
                 
                     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-
-                    
                     <script src="https://mediafiles.botpress.cloud/e61ae656-7099-4767-9121-00a78d5fa832/webchat/config.js" defer></script>
 
                 

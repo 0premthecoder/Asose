@@ -1,5 +1,5 @@
 import { collection, addDoc, query, where, onSnapshot, getDocs, collectionRef, updateDoc} from "firebase/firestore"; 
- import firebase from '../firebase/clientapp'
+import { firebase } from '../firebase/clientapp'
 import React from 'react'
 // import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";

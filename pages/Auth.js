@@ -4,9 +4,8 @@ import { authorization } from "../firebase/clientapp";
 import {signInWithPopup, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import GoogleButton from 'react-google-button'
 import GithubButton from 'react-github-login-button'
-
-
 import Router from "next/router";
+
 function Auth() {
     const signInwithGithub = async (e) => {
         e.preventDefault()

@@ -3,9 +3,6 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { getAuth } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 
-
-
-
 const clientCredentials = {
   apiKey: "AIzaSyAUxcVIH1VlP0fXFvYVo1RbypJz0173Fao",
   authDomain: "asosewebsite.firebaseapp.com",
@@ -17,7 +14,7 @@ const clientCredentials = {
 };
 
 
-export const firebase = initializeApp(clientCredentials);
+export default firebase = initializeApp(clientCredentials);
 export const db = getFirestore(firebase);
 export const authorization = getAuth(firebase);
 

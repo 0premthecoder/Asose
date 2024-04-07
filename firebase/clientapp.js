@@ -20,3 +20,4 @@ export const authorization = getAuth(firebase);
 if (firebase.name && typeof window !== 'undefined') {
   const analytics = getAnalytics(firebase);
 }
+export default firebase;

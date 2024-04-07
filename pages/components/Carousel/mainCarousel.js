@@ -1,5 +1,5 @@
 import React from "react";
-import { MainCrouselData } from "./mainCarouselData";
+import { MainCrouselData } from "../../../firebase/mainCarouselData";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 

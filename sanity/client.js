@@ -2,9 +2,9 @@ import sanityClient from "@sanity/client";
 
 const config = {
   dataset: "production",
-  projectId: "d8tx68dl",
+  projectId: "jynt2wpw",
   apiVersion: "2021-04-28",
-  token: 'skNyNesL2rVORROdHTFxO2lL0GSUwQHhYSZphfvsxXaGjDenX8jq67tHCPMFB9k65OpIIjcTVWrIKBAlEyxzvWhqsNhMvzN83mil7WM0EqNWtNHwowdHF8a7OUz9nuQ5rt1LVpQ9Htl5bMp92rdR8jqqMBUuW3ErGjFVdPIYul1bZ7CaNxdx',
+  token: 'skNF9n3oio8cuooOpQmTm9ivIXOoj9RRJKOxsIOmVnwcdeCbUMOAX89XaVA7F0VyZwXfdfZPTisRVdfQPVy9ioX0oTFbf978dOudMn5gKSyIIJwGfG2WGuNtkrn6JsMtbKz1TKLT7jcHB6IxwgdBhdcZUJLnHHRoIuK1tGLooa3JGLNwnyF9',
   useCdn: false,
 };
 

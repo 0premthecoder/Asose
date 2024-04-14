@@ -10,8 +10,7 @@ function courses() {
   return (
     <>
     <Head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1833417954797911"
-     crossorigin="anonymous"></script>
+   
         <title>Courses - Asose Sector 5 Dwarka</title>
       </Head>
       <Header />
@@ -33,7 +32,7 @@ function courses() {
               <p>
               Coding is the process of using a programming language to create software applications, websites, and other types of computer programs...
               </p>
-              <Link href="/blog/coding" className="btn">
+              <Link href="/course/coding" className="btn">
                 read more
               </Link>
               <div className="icons">
@@ -55,7 +54,7 @@ function courses() {
               <p>
               This process typically involves the use of automated machines, robotic systems, and other computer-controlled equipment to produce goods in an efficient and cost-effective manner...
               </p>
-              <Link href="/blog/electro-mechanical-production" className="btn">
+              <Link href="/course/electro-mechanical-production" className="btn">
                 read more
               </Link>
               <div className="icons">
@@ -77,7 +76,7 @@ function courses() {
               <p>
               Finance is the broader of the two disciplines, and it involves strategies and activities related to managing money, such as investments, budgeting, and forecasting...
               </p>
-              <Link href="/blog/finance" className="btn">
+              <Link href="/course/finance" className="btn">
                 read more
               </Link>
               <div className="icons">
@@ -99,7 +98,7 @@ function courses() {
               <p>
               It is the process of using digital tools to create visually engaging, interactive, and user-friendly experiences that are tailored to a specific audience...
               </p>
-              <Link href="/blog/digital-media-and-designing" className="btn">
+              <Link href="/course/digital-media-and-designing" className="btn">
                 read more
               </Link>
               <div className="icons">
@@ -121,7 +120,7 @@ function courses() {
               <p>
               Art of creating garments and accessories that are aesthetically pleasing and comfortable to wear. It use of fabrics, colours, patterns, and silhouettes to create a unique look...
               </p>
-              <Link href='/blog/fashion' className="btn">
+              <Link href='/course/fashion' className="btn">
                 read more
               </Link>
               <div className="icons">
@@ -143,7 +142,7 @@ function courses() {
               <p>
               Robotics is the branch of engineering that deals with the design, construction, operation, and use of robots. Robots are machines that can be programmed...
               </p>
-              <Link href="/blog/robotics" className="btn">
+              <Link href="/course/robotics" className="btn">
                 read more
               </Link>
               <div className="icons">

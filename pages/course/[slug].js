@@ -5,9 +5,9 @@ import Header from '../components/Header';
 import Link from 'next/link';
 import Footer from '../components/Footer';
 import Head from 'next/head';
+import Script from 'next/script'
 
 function post({ blog }) {
-    console.log(blog)
     return (
         <>
             <Head>
@@ -17,7 +17,7 @@ function post({ blog }) {
             <Header />
             <section class="heading-link">
                 <h3>{blog.title}</h3>
-                <p> <Link href="/blog/allpost">Blogs</Link> / {blog.title} </p>
+                <p> <Link href="/courses">Courses</Link> / {blog.title} </p>
             </section>
 
             <section className='blogContent'>
@@ -78,7 +78,7 @@ export default post
 export async function getServerSideProps(context) {
     const { slug } = context.query
     const client = createClient({
-        projectId: "jynt2wpw",
+        projectId: "2paqrnsj",
         dataset: "production",
         useCdn: true,
         apiVersion: "2021-04-28",

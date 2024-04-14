@@ -27,7 +27,7 @@ function post({ blog }) {
                     <PortableText
                         // Pass in block content straight from Sanity.io
                         content={blog.content}
-                        projectId="2paqrnsj"
+                        projectId="jynt2wpw"
                         dataset="production"
                         
                         // Optionally override marks, decorators, blocks, etc. in a flat
@@ -72,9 +72,6 @@ function post({ blog }) {
 
 export default post
 
-
-
-
 export async function getServerSideProps(context) {
     const { slug } = context.query
     const client = createClient({
@@ -86,7 +83,7 @@ export async function getServerSideProps(context) {
 
     const query = `*[_type == 'post' && slug.current == '${slug}'][0]{
         "imageUrl": mainImage.asset->url,
-        "content":body,
+        "content":Body,
         "title": title,
         "author": author
       }`

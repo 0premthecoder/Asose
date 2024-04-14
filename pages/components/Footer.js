@@ -11,8 +11,8 @@ export default function Footer() {
                 </p>
                 <div className="share">
                     <a href="#" className="fab fa-facebook-f" />
-                    <a href="#" className="fab fa-youtube" />
-                    <a href="#" className="fab fa-instagram" />
+                    <a href="https://www.youtube.com/@asose.rpvvsec5official" target="_blank" className="fab fa-youtube" />
+                    <a href="https://www.instagram.com/sose_rpvv_sec_5_dwarka" target="_blank" className="fab fa-instagram" />
                     <a href="#" className="fab fa-github" />
                 </div>
             </div>

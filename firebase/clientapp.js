@@ -3,9 +3,6 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { getAuth } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 
-
-
-
 const clientCredentials = {
   apiKey: "AIzaSyAUxcVIH1VlP0fXFvYVo1RbypJz0173Fao",
   authDomain: "asosewebsite.firebaseapp.com",
@@ -24,3 +21,5 @@ export const authorization = getAuth(firebase);
 if (firebase.name && typeof window !== 'undefined') {
   const analytics = getAnalytics(firebase);
 }
+
+export default firebase;

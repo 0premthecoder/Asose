@@ -22,11 +22,12 @@ function courses() {
         <h1 className="heading"> Our Skill Courses </h1>
         <div className="box-container">
           <div className="box">
+          <Link href="/course/coding">
             <div className="image">
               <Image width={350}
                             height={250} src="/course-2-1.jpg" alt="" />
               <h3>Coding</h3>
-            </div>
+            </div></Link>
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
@@ -44,11 +45,12 @@ function courses() {
             </div>
           </div>
           <div className="box">
+          <Link href="/course/electro-mechanical-production" >
             <div className="image">
               <Image width={350}
                             height={250} src="/course-2-2.jpg" alt="" />
               <h3>Electro Mechanical Production</h3>
-            </div>
+            </div></Link>
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
@@ -66,11 +68,12 @@ function courses() {
             </div>
           </div>
           <div className="box">
+          <Link href="/course/finance">
             <div className="image">
               <Image width={350}
                             height={250} src="/finance2.webp" alt="" />
               <h3>Finance &amp; Accounting</h3>
-            </div>
+            </div></Link>
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
@@ -88,11 +91,12 @@ function courses() {
             </div>
           </div>
           <div className="box">
+          <Link href="/course/digital-media-and-designing" >
             <div className="image">
               <Image width={350}
                             height={250} src="/course-2-7.jpg" alt="" />
               <h3>Digital media &amp; designing</h3>
-            </div>
+            </div></Link>
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
@@ -110,11 +114,12 @@ function courses() {
             </div>
           </div>
           <div className="box">
+          <Link href='/course/fashion'>
             <div className="image">
               <Image width={350}
                             height={250} src="/fashion1.jpg" alt="" />
               <h3>Fashion Design And Aesthetics</h3>
-            </div>
+            </div></Link>
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
@@ -132,11 +137,13 @@ function courses() {
             </div>
           </div>
           <div className="box">
+          <Link href="/course/robotics">
             <div className="image">
               <Image width={350}
                             height={250} src="/robot skill.jpg" alt="" />
               <h3>Robotics</h3>
             </div>
+            </Link>
             <div className="content">
               <h3>choose what's best for you!</h3>
               <p>
